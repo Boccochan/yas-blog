@@ -32,7 +32,7 @@ unit testing with [Jest](https://jestjs.io/).
 -   the files in [src/components/](./src/components/) and
     [src/pages/](./src/pages/) have been updated with TypeScript support
 -   the default Gatsby CSS file (layout.css) has been deleted; you'll find
-    [src/components/main.css](./src/components/main.css) in its place
+    [src/styles/main.css](./src/styles/main.css) in its place
 
 ## 🚀 Quick start
 
