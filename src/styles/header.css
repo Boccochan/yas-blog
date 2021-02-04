@@ -1,0 +1,7 @@
+.header-separator {
+    border-left: 2px solid #000;
+}
+.header-separator::before {
+    margin-left: 1em;
+    content: ' ';
+}
