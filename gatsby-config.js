@@ -1,4 +1,4 @@
-require('ts-node').register({ files: true });
+require('ts-node').register({ files: true })
 
 module.exports = {
     siteMetadata: {
@@ -40,4 +40,4 @@ module.exports = {
             },
         },
     ],
-};
+}

@@ -1,8 +1,8 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import { FunctionComponent } from 'react';
-import { ReactElement } from 'react';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { FunctionComponent } from 'react'
+import { ReactElement } from 'react'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -28,9 +28,9 @@ const Image: FunctionComponent = (): ReactElement => {
                 }
             }
         }
-    `);
+    `)
 
-    return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
-};
+    return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+}
 
-export default Image;
+export default Image

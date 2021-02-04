@@ -1,10 +1,10 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import { FunctionComponent } from 'react';
-import { ReactElement } from 'react';
+import { Link } from 'gatsby'
+import React from 'react'
+import { FunctionComponent } from 'react'
+import { ReactElement } from 'react'
 
 interface HeaderProps {
-    siteTitle: string;
+    siteTitle: string
 }
 
 const Header: FunctionComponent<HeaderProps> = ({
@@ -24,6 +24,6 @@ const Header: FunctionComponent<HeaderProps> = ({
             </div>
         </div>
     </header>
-);
+)
 
-export default Header;
+export default Header

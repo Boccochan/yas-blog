@@ -1,7 +1,7 @@
-import React from 'react';
-import { FunctionComponent } from 'react';
-import { ReactElement } from 'react';
+import React from 'react'
+import { FunctionComponent } from 'react'
+import { ReactElement } from 'react'
 
-const BlogPage: FunctionComponent = (): ReactElement => <div>Blog</div>;
+const BlogPage: FunctionComponent = (): ReactElement => <div>Blog</div>
 
-export default BlogPage;
+export default BlogPage

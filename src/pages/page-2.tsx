@@ -1,10 +1,10 @@
-import React from 'react';
-import { FunctionComponent } from 'react';
-import { ReactElement } from 'react';
-import { Link } from 'gatsby';
+import React from 'react'
+import { FunctionComponent } from 'react'
+import { ReactElement } from 'react'
+import { Link } from 'gatsby'
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const SecondPage: FunctionComponent = (): ReactElement => (
     <Layout>
@@ -15,6 +15,6 @@ const SecondPage: FunctionComponent = (): ReactElement => (
             Go back to the homepage
         </Link>
     </Layout>
-);
+)
 
-export default SecondPage;
+export default SecondPage
