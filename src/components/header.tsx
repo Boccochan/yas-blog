@@ -2,7 +2,6 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { FunctionComponent } from 'react';
 import { ReactElement } from 'react';
-import '@/styles/header.css';
 
 interface HeaderProps {
     siteTitle: string;
