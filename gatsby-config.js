@@ -2,7 +2,7 @@ require('ts-node').register({ files: true })
 
 module.exports = {
     siteMetadata: {
-        title: `Yas Blog`,
+        title: `Yasuhiro Ito`,
         description: `Yasuhiro Blog`,
         author: `Yasuhiro Ito`,
     },
