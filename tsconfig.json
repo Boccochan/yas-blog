@@ -12,6 +12,10 @@
         "noEmit": true,
         "skipLibCheck": true,
         "noImplicitAny": false,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     }
 }

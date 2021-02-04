@@ -12,7 +12,7 @@ import { ReactElement } from 'react';
 import { ReactNode } from 'react';
 
 import Header from './header';
-import './main.css';
+import '@/styles/main.css';
 
 interface LayoutProps {
     children: ReactNode;
