@@ -20,16 +20,26 @@ const Header: FunctionComponent<HeaderProps> = ({
             </h1>
             <div className="flex flex-row w-6/12">
                 <div className="border-l-2 border-black px-6">
-                    <Link to="/blog" className="text-gray-800 text-center menu">
+                    <Link to="/blog" className="text-gray-900 text-center menu">
                         Yasuhiro Official Blog
                     </Link>
                 </div>
-                <Link to="/lab" className="text-gray-800 text-center mr-6 menu">
-                    Laboratory
-                </Link>
-                <Link to="/contact" className="text-gray-800 text-center menu">
-                    Contact
-                </Link>
+                <div>
+                    <Link
+                        to="/lab"
+                        className="text-gray-900 text-center mr-6 menu font-light text-sm"
+                    >
+                        Laboratory
+                    </Link>
+                </div>
+                <div>
+                    <Link
+                        to="/contact"
+                        className="text-gray-900 text-center menu font-light text-sm"
+                    >
+                        Contact
+                    </Link>
+                </div>
             </div>
         </div>
     </header>
