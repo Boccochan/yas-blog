@@ -22,6 +22,12 @@ const Header: FunctionComponent<HeaderProps> = ({
                     Yasuhiro Official Blog
                 </Link>
             </div>
+            <Link to="/lab" className="text-gray-800 text-center mr-6">
+                Laboratory
+            </Link>
+            <Link to="/contact" className="text-gray-800 text-center">
+                Contact
+            </Link>
         </div>
     </header>
 )
