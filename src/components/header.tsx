@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { FunctionComponent } from 'react'
 import { ReactElement } from 'react'
+import '@/styles/header.css'
 
 interface HeaderProps {
     siteTitle: string
@@ -12,22 +13,24 @@ const Header: FunctionComponent<HeaderProps> = ({
 }: HeaderProps): ReactElement => (
     <header className="bg-white mb-6">
         <div className="flex flex-row items-center mx-auto max-w-6xl py-2 px-2">
-            <h1 className="text-2xl ext-center py-1 mr-6">
+            <h1 className="text-2xl text-center py-1 mr-6">
                 <Link to="/" className="text-gray-800">
                     {siteTitle}
                 </Link>
             </h1>
-            <div className="border-l-2 border-black px-6">
-                <Link to="/blog" className="text-gray-800 text-center">
-                    Yasuhiro Official Blog
+            <div className="flex flex-row w-6/12">
+                <div className="border-l-2 border-black px-6">
+                    <Link to="/blog" className="text-gray-800 text-center menu">
+                        Yasuhiro Official Blog
+                    </Link>
+                </div>
+                <Link to="/lab" className="text-gray-800 text-center mr-6 menu">
+                    Laboratory
+                </Link>
+                <Link to="/contact" className="text-gray-800 text-center menu">
+                    Contact
                 </Link>
             </div>
-            <Link to="/lab" className="text-gray-800 text-center mr-6">
-                Laboratory
-            </Link>
-            <Link to="/contact" className="text-gray-800 text-center">
-                Contact
-            </Link>
         </div>
     </header>
 )
