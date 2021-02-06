@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React, { useState } from 'react'
 import { FunctionComponent } from 'react'
 import { ReactElement } from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import '@/styles/header.css'
 
 interface HeaderProps {
@@ -47,7 +47,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             className="md:hidden mr-6 ml-4 text-xl"
             onClick={() => setOpen(!open)}
           >
-            <FaBars />
+            {open ? <FaTimes /> : <FaBars />}
           </div>
 
           <h1 className="text-2xl text-center py-1 mr-6">
