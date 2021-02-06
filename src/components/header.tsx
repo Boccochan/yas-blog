@@ -15,24 +15,18 @@ const Menu = () => {
       <li className="md:border-l-2 md:border-black md:px-6">
         <Link
           to="/blog"
-          className="text-gray-900 text-center menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:text-base md:font-normal"
+          className="menu menu-hover md:text-base md:font-normal"
         >
           Yasuhiro Official Blog
         </Link>
       </li>
       <li>
-        <Link
-          to="/lab"
-          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:mr-6 md:text-sm"
-        >
+        <Link to="/lab" className="menu menu-hover">
           Laboratory
         </Link>
       </li>
       <li>
-        <Link
-          to="/contact"
-          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:mr-6 md:text-sm"
-        >
+        <Link to="/contact" className="menu menu-hover">
           Contact
         </Link>
       </li>
@@ -68,7 +62,7 @@ const Header: FunctionComponent<HeaderProps> = ({
       </header>
       {open && (
         <div className="relative">
-          <nav className="md:hidden bg-gray-300 absolute z-50 w-full shadow-lg">
+          <nav className="md:hidden bg-white absolute z-50 w-full shadow-lg">
             <ul>
               <Menu />
             </ul>

@@ -24,3 +24,15 @@
 .menu {
   @apply text-gray-900 text-center font-light;
 }
+
+@screen xs {
+  .menu {
+    @apply my-4 ml-4 text-lg;
+  }
+}
+
+@screen md {
+  .menu {
+    @apply m-0 mr-6 text-sm;
+  }
+}
