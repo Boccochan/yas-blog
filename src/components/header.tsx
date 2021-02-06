@@ -15,7 +15,7 @@ const Menu = () => {
       <li className="md:border-l-2 md:border-black md:px-6">
         <Link
           to="/blog"
-          className="text-gray-900 text-center menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+          className="text-gray-900 text-center menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:text-base md:font-normal"
         >
           Yasuhiro Official Blog
         </Link>
@@ -23,7 +23,7 @@ const Menu = () => {
       <li>
         <Link
           to="/lab"
-          className="menu mr-6 menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:mr-6 md:text-sm"
         >
           Laboratory
         </Link>
@@ -31,7 +31,7 @@ const Menu = () => {
       <li>
         <Link
           to="/contact"
-          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0 md:mr-6 md:text-sm"
         >
           Contact
         </Link>
@@ -49,9 +49,13 @@ const Header: FunctionComponent<HeaderProps> = ({
     <>
       <header className="bg-white">
         <nav className="flex flex-row items-center mx-auto max-w-6xl py-2 px-2">
-          <div className="md:hidden mr-6" onClick={() => setOpen(!open)}>
+          <div
+            className="md:hidden mr-6 ml-4 text-xl"
+            onClick={() => setOpen(!open)}
+          >
             <FaBars />
           </div>
+
           <h1 className="text-2xl text-center py-1 mr-6">
             <Link to="/" className="text-gray-800">
               {siteTitle}
@@ -63,8 +67,8 @@ const Header: FunctionComponent<HeaderProps> = ({
         </nav>
       </header>
       {open && (
-        <div className="relative ">
-          <nav className="md:hidden bg-gray-300 absolute z-50 w-full">
+        <div className="relative">
+          <nav className="md:hidden bg-gray-300 absolute z-50 w-full shadow-lg">
             <ul>
               <Menu />
             </ul>
