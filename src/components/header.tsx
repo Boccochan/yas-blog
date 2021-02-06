@@ -9,6 +9,37 @@ interface HeaderProps {
   siteTitle: string
 }
 
+const Menu = () => {
+  return (
+    <>
+      <li className="md:border-l-2 md:border-black md:px-6">
+        <Link
+          to="/blog"
+          className="text-gray-900 text-center menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+        >
+          Yasuhiro Official Blog
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/lab"
+          className="menu mr-6 menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+        >
+          Laboratory
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/contact"
+          className="menu menu-hover xs:my-4 xs:ml-4 xs:text-lg md:m-0"
+        >
+          Contact
+        </Link>
+      </li>
+    </>
+  )
+}
+
 const Header: FunctionComponent<HeaderProps> = ({
   siteTitle,
 }: HeaderProps): ReactElement => {
@@ -21,40 +52,21 @@ const Header: FunctionComponent<HeaderProps> = ({
           <div className="md:hidden mr-6" onClick={() => setOpen(!open)}>
             <FaBars />
           </div>
-
           <h1 className="text-2xl text-center py-1 mr-6">
             <Link to="/" className="text-gray-800">
               {siteTitle}
             </Link>
           </h1>
-
           <ul className="hidden md:flex md:flex-row w-6/12">
-            <li className="border-l-2 border-black px-6">
-              <Link
-                to="/blog"
-                className="text-gray-900 text-center menu menu-hover"
-              >
-                Yasuhiro Official Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/lab" className="menu mr-6 menu-hover">
-                Laboratory
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="menu menu-hover">
-                Contact
-              </Link>
-            </li>
+            <Menu />
           </ul>
         </nav>
       </header>
       {open && (
         <div className="relative ">
-          <nav className="md:hidden bg-gray-200 absolute z-50 w-full">
+          <nav className="md:hidden bg-gray-300 absolute z-50 w-full">
             <ul>
-              <li>Hello</li>
+              <Menu />
             </ul>
           </nav>
         </div>
