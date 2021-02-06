@@ -2,6 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { FunctionComponent } from 'react'
 import { ReactElement } from 'react'
+import { FaBars } from 'react-icons/fa'
 import '@/styles/header.css'
 
 interface HeaderProps {
@@ -13,13 +14,17 @@ const Header: FunctionComponent<HeaderProps> = ({
 }: HeaderProps): ReactElement => (
   <header className="bg-white mb-6">
     <nav className="flex flex-row items-center mx-auto max-w-6xl py-2 px-2">
+      <div className="md:hidden mr-6">
+        <FaBars />
+      </div>
+
       <h1 className="text-2xl text-center py-1 mr-6">
         <Link to="/" className="text-gray-800">
           {siteTitle}
         </Link>
       </h1>
 
-      <ul className="flex flex-row w-6/12">
+      <ul className="hidden md:flex md:flex-row w-6/12">
         <li className="border-l-2 border-black px-6">
           <Link
             to="/blog"
