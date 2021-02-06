@@ -21,17 +21,20 @@ const Header: FunctionComponent<HeaderProps> = ({
 
       <ul className="flex flex-row w-6/12">
         <li className="border-l-2 border-black px-6">
-          <Link to="/blog" className="text-gray-900 text-center menu">
+          <Link
+            to="/blog"
+            className="text-gray-900 text-center menu menu-hover"
+          >
             Yasuhiro Official Blog
           </Link>
         </li>
         <li>
-          <Link to="/lab" className="menu mr-6">
+          <Link to="/lab" className="menu mr-6 menu-hover">
             Laboratory
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="menu">
+          <Link to="/contact" className="menu menu-hover">
             Contact
           </Link>
         </li>
