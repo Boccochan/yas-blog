@@ -20,7 +20,8 @@
     "gatsby-transformer-sharp": "^2.5.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.2",

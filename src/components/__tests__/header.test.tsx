@@ -4,15 +4,15 @@ import { render } from '@testing-library/react'
 import Header from '../header'
 
 describe('Header', () => {
-    it('renders correctly', () => {
-        const tree = renderer.create(<Header siteTitle="Starter" />).toJSON()
+  it('renders correctly', () => {
+    const tree = renderer.create(<Header siteTitle="Starter" />).toJSON()
 
-        expect(tree).toMatchSnapshot()
-    })
+    expect(tree).toMatchSnapshot()
+  })
 
-    it('contains a link to the home page', () => {
-        const { getByText } = render(<Header siteTitle="Starter" />)
+  it('contains a link to the home page', () => {
+    const { getByText } = render(<Header siteTitle="Starter" />)
 
-        expect(getByText('Starter')).toHaveAttribute('href', '/')
-    })
+    expect(getByText('Starter')).toHaveAttribute('href', '/')
+  })
 })
