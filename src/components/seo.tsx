@@ -1,27 +1,20 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { FunctionComponent } from 'react'
-import { ReactElement } from 'react'
 
 interface Meta {
   name: string
   content: string
 }
 
-interface SeoProps {
+interface Props {
   description?: string
   lang?: string
   meta?: Meta[]
   title: string
 }
 
-const SEO: FunctionComponent<SeoProps> = ({
-  description = '',
-  lang = 'en',
-  meta = [],
-  title,
-}: SeoProps): ReactElement => {
+const SEO = ({ description = '', lang = 'en', meta = [], title }: Props) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {
