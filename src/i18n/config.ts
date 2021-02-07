@@ -5,10 +5,10 @@ i18next.use(LanguageDetector).init({
   fallbackLng: 'en',
   resources: {
     ja: {
-      translations: require('@/locales/ja.json'),
+      translations: require('@/i18n/locales/ja.json'),
     },
     en: {
-      translations: require('@/locales/en.json'),
+      translations: require('@/i18n/locales/en.json'),
     },
   },
   ns: ['translations'],
