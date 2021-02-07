@@ -25,22 +25,17 @@ const Layout: FunctionComponent<LayoutProps> = ({
   `)
 
   return (
-    <>
+    <div className="flex flex-col bg-gray-100 w-full min-h-screen">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="mx-auto max-w-4xl pt-0 px-4 pb-6">
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a
-            className="underline text-blue-500"
-            href="https://www.gatsbyjs.org"
-          >
-            Gatsby
-          </a>
-        </footer>
-      </div>
-    </>
+      <main className="flex-grow mx-auto max-w-4xl pt-0 px-4 pb-6">
+        {children}
+      </main>
+      <footer className="flex-none bg-gray-300">
+        <p className="p-2 text-center text-xs">
+          Copyright © 2021 Yasuhiro Ito. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
   )
 }
 
