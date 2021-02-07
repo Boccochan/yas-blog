@@ -1,34 +1,24 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import { FunctionComponent } from 'react'
-import { ReactElement } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useLocation } from '@reach/router'
 import Anchor from '@/components/anchor'
 
 import '@/styles/header.css'
 
-interface HeaderProps {
+interface Props {
   siteTitle: string
 }
 
 const Menu = ({ currentPath }: { currentPath: string }) => (
   <>
     <li className="md:border-l-2 md:border-black md:pl-6">
-      <Anchor
-        to="/blog"
-        className="md:text-base"
-        isSelected={currentPath === 'blog'}
-      >
+      <Anchor to="/blog" className="md:text-base" currentPath={currentPath}>
         Yasuhiro Official Blog
       </Anchor>
     </li>
     <li>
-      <Anchor
-        to="/lab"
-        className="menu menu-hover"
-        isSelected={currentPath === 'lab'}
-      >
+      <Anchor to="/lab" className="menu menu-hover" currentPath={currentPath}>
         Laboratory
       </Anchor>
     </li>
@@ -36,7 +26,7 @@ const Menu = ({ currentPath }: { currentPath: string }) => (
       <Anchor
         to="/contact"
         className="menu menu-hover"
-        isSelected={currentPath === 'contact'}
+        currentPath={currentPath}
       >
         Contact
       </Anchor>
@@ -44,14 +34,9 @@ const Menu = ({ currentPath }: { currentPath: string }) => (
   </>
 )
 
-const Header: FunctionComponent<HeaderProps> = ({
-  siteTitle,
-}: HeaderProps): ReactElement => {
+const Header = ({ siteTitle }: Props) => {
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
-
-  const splitted = pathname.split('/')
-  const currentPath = splitted.length > 1 ? splitted[1] : '/'
 
   return (
     <>
@@ -63,14 +48,13 @@ const Header: FunctionComponent<HeaderProps> = ({
           >
             {open ? <FaTimes /> : <FaBars />}
           </div>
-
           <h1 className="text-2xl text-center py-1 mr-6">
             <Link to="/" className="text-gray-800">
               {siteTitle}
             </Link>
           </h1>
           <ul className="hidden md:flex md:flex-row w-6/12">
-            <Menu currentPath={currentPath} />
+            <Menu currentPath={pathname} />
           </ul>
         </nav>
       </header>
@@ -78,7 +62,7 @@ const Header: FunctionComponent<HeaderProps> = ({
         <div className="relative">
           <nav className="md:hidden bg-white absolute z-50 w-full shadow-lg">
             <ul>
-              <Menu currentPath={currentPath} />
+              <Menu currentPath={pathname} />
             </ul>
           </nav>
         </div>

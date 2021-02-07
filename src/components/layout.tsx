@@ -1,19 +1,14 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { FunctionComponent } from 'react'
-import { ReactElement } from 'react'
-import { ReactNode } from 'react'
-
 import Header from './header'
+
 import '@/styles/main.css'
 
-interface LayoutProps {
+interface Props {
   children: ReactNode
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({
-  children,
-}: LayoutProps): ReactElement => {
+const Layout = ({ children }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
