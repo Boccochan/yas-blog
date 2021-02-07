@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Header from './header'
+import Header from '@/components/header'
+import { withTrans } from '@/components/withTrans'
 
 import '@/styles/main.css'
 
@@ -34,4 +35,4 @@ const Layout = ({ children }: Props) => {
   )
 }
 
-export default Layout
+export default withTrans(Layout)
