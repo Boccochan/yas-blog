@@ -1,13 +1,11 @@
 import React from 'react'
-import { FunctionComponent } from 'react'
-import { ReactElement } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '@/components/layout'
 import Image from '@/components/image'
 import SEO from '@/components/seo'
 
-const IndexPage: FunctionComponent = (): ReactElement => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Yasuhiro Ito" />
     <h1 className="text-3xl">Hi people</h1>
