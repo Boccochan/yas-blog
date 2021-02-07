@@ -22,13 +22,7 @@
 }
 
 .menu {
-  @apply text-gray-900 text-center font-light;
-}
-
-@screen xs {
-  .menu {
-    @apply my-4 ml-4 text-lg;
-  }
+  @apply text-gray-900 text-center font-light my-4 ml-4 text-lg;
 }
 
 @screen md {
