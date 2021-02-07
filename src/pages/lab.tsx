@@ -1,7 +1,12 @@
 import React from 'react'
-import { FunctionComponent } from 'react'
-import { ReactElement } from 'react'
+import Layout from '@/components/layout'
+import SEO from '@/components/seo'
 
-const BlogPage: FunctionComponent = (): ReactElement => <div>Blog</div>
+const LabPage = () => (
+  <Layout>
+    <SEO title="Lab" />
+    <h1 className="text-3xl">This is lab</h1>
+  </Layout>
+)
 
-export default BlogPage
+export default LabPage
