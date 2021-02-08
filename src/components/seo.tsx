@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { usePageContext } from '@/i18n/PageContext'
 
 interface Meta {
   name: string
@@ -14,7 +15,7 @@ interface Props {
   title: string
 }
 
-const SEO = ({ description = '', lang = 'en', meta = [], title }: Props) => {
+const SEO = ({ description = '', meta = [], title }: Props) => {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -26,6 +27,8 @@ const SEO = ({ description = '', lang = 'en', meta = [], title }: Props) => {
       }
     }
   `)
+
+  const { lang, originalPath } = usePageContext()
 
   const metaDescription = description || site.siteMetadata.description
 

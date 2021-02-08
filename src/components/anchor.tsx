@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
 import React, { ReactNode } from 'react'
+import Link from '@/components/link'
 
 interface Props {
   to: string
