@@ -5,6 +5,8 @@ module.exports = {
     title: `Yasuhiro Ito`,
     description: `Yasuhiro Blog`,
     author: `Yasuhiro Ito`,
+    supportedLanguages: ['en', 'ja'],
+    defaultLanguage: 'en',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,5 +47,6 @@ module.exports = {
         component: `${__dirname}/src/components/layout.tsx`,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
