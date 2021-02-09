@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import Anchor from '@/components/anchor'
+import Anchor from '@/components/Anchor'
 
 import '@/styles/header.css'
 

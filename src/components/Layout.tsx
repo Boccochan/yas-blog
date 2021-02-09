@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Header from '@/components/header'
+import Header from '@/components/Header'
 
 import '@/styles/main.css'
 
