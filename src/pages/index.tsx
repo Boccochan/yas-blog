@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Image from '@/components/image'
-import SEO from '@/components/seo'
-import Layout from '@/components/layout'
+import Image from '@/components/Image'
+import SEO from '@/components/Seo'
+import Layout from '@/components/Layout'
 import { useTranslation } from 'react-i18next'
 
 const IndexPage = () => {
