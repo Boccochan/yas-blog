@@ -41,12 +41,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: `${__dirname}/src/components/layout.tsx`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: `${__dirname}/src/components/layout.tsx`,
+    //   },
+    // },
     `gatsby-plugin-netlify`,
   ],
 }

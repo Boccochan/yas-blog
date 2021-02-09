@@ -1,7 +1,5 @@
-import { Link } from 'gatsby'
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { useLocation } from '@reach/router'
 import Anchor from '@/components/anchor'
 
 import '@/styles/header.css'
@@ -10,24 +8,20 @@ interface Props {
   siteTitle: string
 }
 
-const Menu = ({ currentPath }: { currentPath: string }) => (
+const Menu = () => (
   <>
     <li className="md:border-l-2 md:border-black md:pl-6">
-      <Anchor to="/blog" className="md:text-base" currentPath={currentPath}>
+      <Anchor to="/blog" className="menu menu-hover md:text-base">
         Yasuhiro Official Blog
       </Anchor>
     </li>
     <li>
-      <Anchor to="/lab" className="menu menu-hover" currentPath={currentPath}>
+      <Anchor to="/lab" className="menu menu-hover">
         Laboratory
       </Anchor>
     </li>
     <li>
-      <Anchor
-        to="/contact"
-        className="menu menu-hover"
-        currentPath={currentPath}
-      >
+      <Anchor to="/contact" className="menu menu-hover">
         Contact
       </Anchor>
     </li>
@@ -36,7 +30,6 @@ const Menu = ({ currentPath }: { currentPath: string }) => (
 
 const Header = ({ siteTitle }: Props) => {
   const [open, setOpen] = useState(false)
-  const { pathname } = useLocation()
 
   return (
     <>
@@ -49,12 +42,12 @@ const Header = ({ siteTitle }: Props) => {
             {open ? <FaTimes /> : <FaBars />}
           </div>
           <h1 className="text-2xl text-center py-1 mr-6">
-            <Link to="/" className="text-gray-800">
+            <Anchor to="/" className="text-gray-800">
               {siteTitle}
-            </Link>
+            </Anchor>
           </h1>
           <ul className="hidden md:flex md:flex-row w-6/12">
-            <Menu currentPath={pathname} />
+            <Menu />
           </ul>
         </nav>
       </header>
@@ -62,7 +55,7 @@ const Header = ({ siteTitle }: Props) => {
         <div className="relative">
           <nav className="md:hidden bg-white absolute z-50 w-full shadow-lg">
             <ul>
-              <Menu currentPath={pathname} />
+              <Menu />
             </ul>
           </nav>
         </div>
