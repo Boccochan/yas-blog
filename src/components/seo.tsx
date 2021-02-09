@@ -28,7 +28,7 @@ const SEO = ({ description = '', meta = [], title }: Props) => {
     }
   `)
 
-  const { lang, originalPath } = usePageContext()
+  const { lang } = usePageContext()
 
   const metaDescription = description || site.siteMetadata.description
 

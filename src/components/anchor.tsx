@@ -1,21 +1,23 @@
 import React, { ReactNode } from 'react'
-import Link from '@/components/link'
+import { Link } from 'gatsby'
+import { usePageContext } from '@/i18n/PageContext'
+import { useLocation } from '@reach/router'
 
 interface Props {
   to: string
   children: ReactNode
-  currentPath: string
   className?: string
 }
 
-const baseStyle = 'menu menu-hover'
+const Anchor = ({ to, children, className }: Props) => {
+  const { lang } = usePageContext()
+  const { pathname } = useLocation()
 
-const Anchor = ({ to, children, className, currentPath }: Props) => {
-  const base = currentPath === to ? `${baseStyle} text-blue-700` : baseStyle
-  const style = className === undefined ? base : `${base} ${className}`
+  const nextPath = `/${lang}${to}`
+  const style = pathname === nextPath ? `${className} text-blue-700` : className
 
   return (
-    <Link to={to} className={style}>
+    <Link to={nextPath} className={style}>
       {children}
     </Link>
   )
