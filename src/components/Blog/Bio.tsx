@@ -3,18 +3,14 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import Link from '@/components/Link'
+import { FaTwitter, FaGithub } from 'react-icons/fa'
 
 const query = graphql`
   query {
-    allFile(filter: {relativePath: {}, relativeDirectory: {eq: "bio"}}) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
-            }
-          }
+    file(relativePath: { eq: "bio/me.jpg" }) {
+      childImageSharp {
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
@@ -27,32 +23,10 @@ const meStyle = {
   borderRadius: "50%",
 };
 
-const githubStyle = {
-  width: "16px",
-  height: "16px",
-  float: "left"
-};
-
-const twitterStyle = {
-  width: "18px",
-  height: "16px",
-  float: "left"
-};
-
-const filterImg = (data: any, name: string) => {
-  const img = data.allFile.edges.filter(edge => edge.node.childImageSharp.fixed.src.endsWith(name))[0]
-  return img.node.childImageSharp.fixed
-}
-
 const Bio = () => {
   const data = useStaticQuery(query)
   const [t] = useTranslation()
-
-  const me = filterImg(data, 'me.jpg')
-  const github = filterImg(data, 'github-logo.png')
-  const twitter = filterImg(data, 'twitter-logo.png')
-
-  console.log(data)
+  const me = data.file.childImageSharp.fixed
 
   return (
     <div className='max-w-md p-6 bg-white'>
@@ -62,20 +36,20 @@ const Bio = () => {
         <p className="text-gray-700">{t('summary')}</p>
       </div>
       <div className='mb-6'>
-        <div className="mb-4">
-          <a href="https://github.com/Boccochan">
-            <Img fixed={github} alt='author-image' style={githubStyle}/>
-            <p className='pl-10'>Boccochan</p>
+        <div className="mb-2">
+          <a href="https://github.com/Boccochan" className="flex items-center">
+            <FaGithub size='18px'/>
+            <p className='pl-2 text-xs'>Boccochan</p>
           </a>
         </div>
         <div>
-          <a href="https://twitter.com/yasuhiro_it">
-            <Img fixed={twitter} alt='author-image' style={twitterStyle}/>
-            <p className='pl-10'>yasuhiro_it</p>
+          <a href="https://twitter.com/yasuhiro_it" className="flex items-center">
+            <FaTwitter size='18px'/>
+            <p className='pl-2 text-xs'>@yasuhiro_it</p>
           </a>
         </div>
       </div>
-      <div className="bg-blue-500 text-center text-gray-100 md:w-6/12 xs:w-36 py-2">
+      <div className="bg-blue-500 text-center text-gray-100 md:w-6/12 xs:w-36 py-2 cursor-pointer">
         <Link to='/' >{t('go-to-cv')}</Link>
       </div>
         
