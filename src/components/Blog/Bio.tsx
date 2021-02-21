@@ -29,7 +29,7 @@ const Bio = () => {
   const me = data.file.childImageSharp.fixed
 
   return (
-    <div className="max-w-md p-6 bg-white">
+    <div className="p-6 bg-white">
       <Img fixed={me} alt="author-image" style={meStyle} />
       <div className="mb-6">
         <h3 className="my-4 font-bold">{t('author')}</h3>
