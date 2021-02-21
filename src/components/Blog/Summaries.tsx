@@ -12,11 +12,10 @@ interface SummaryProps {
 
 interface Props {
   summaries: SummaryProps[]
-  height: string
+  className: string
 }
 
-const Summaries = ({ summaries, height }: Props) => {
-  const className = `${height} bg-white mb-8`
+const Summaries = ({ summaries, className }: Props) => {
   return (
     <>
       {summaries.map(({ img, date, title, description, link }) => {

@@ -72,18 +72,6 @@ const BlogPage = () => {
       description: "This is a sample summary, it's okay. hello world 2",
       link: 'this.is.link',
     },
-    {
-      title: 'This is sample summary 7',
-      date: new Date(),
-      description: "This is a sample summary, it's okay. hello world 3",
-      link: 'this.is.link',
-    },
-    {
-      title: 'This is sample summary 8',
-      date: new Date(),
-      description: "This is a sample summary, it's okay. hello world 4",
-      link: 'this.is.link',
-    },
   ]
 
   return (
@@ -92,16 +80,29 @@ const BlogPage = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-full">
         <div className="col-span-2 h-full md:pr-4">
           <p className="text-xl mb-3 text-gray-500">{t('posts')}</p>
-          <Summaries summaries={summaries} height="h-blog-summary" />
+          <Summaries
+            summaries={summaries}
+            className="h-blog-summary bg-white mb-8"
+          />
         </div>
-        <div className="col-span-2 md:col-span-1">
+        <div className="col-span-2 h-full md:col-span-1">
           <div className="mb-4">
             <p className="text-xl mb-3 text-gray-500">{t('about-author')}</p>
             <Bio />
           </div>
           <p className="text-xl mb-3 text-gray-500">{t('latest-post')}</p>
-          <Summaries summaries={latests} height="h-24" />
+          <Summaries
+            summaries={latests}
+            className="h-latest-summary bg-white mb-8"
+          />
         </div>
+      </div>
+      <p className="text-xl mb-3 text-gray-500">{t('blog-list')}</p>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full">
+        <Summaries
+          summaries={latests}
+          className="h-blog-list-summary bg-white"
+        />
       </div>
     </Layout>
   )
