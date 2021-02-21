@@ -22,7 +22,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className="flex flex-col bg-gray-100 w-full min-h-screen">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="flex-grow mx-auto max-w-4xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
+      <main className="flex-grow mx-auto max-w-6xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
         {children}
       </main>
       <footer className="flex-none bg-gray-300">

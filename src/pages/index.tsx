@@ -6,7 +6,7 @@ import Layout from '@/components/Layout'
 import { useTranslation } from 'react-i18next'
 
 const IndexPage = () => {
-  const [t, i18n] = useTranslation()
+  const [t] = useTranslation()
   return (
     <Layout>
       <SEO title="Yasuhiro Ito" />

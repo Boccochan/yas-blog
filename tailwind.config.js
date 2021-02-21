@@ -8,6 +8,13 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+    height: {
+      sm: '8px',
+      md: '16px',
+      lg: '24px',
+      xl: '48px',
+      'blog-summary': '600px',
+    },
     extend: {},
   },
   variants: {},
