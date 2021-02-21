@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-plugin-typescript": "^2.4.16",
     "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.5.12",
     "i18next": "^19.8.7",
     "i18next-browser-languagedetector": "^6.0.1",

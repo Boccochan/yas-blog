@@ -1,34 +1,49 @@
 import React from 'react'
-import { FixedObject } from 'gatsby-image'
+import { FluidObject } from 'gatsby-image'
 import Img from 'gatsby-image'
+import Link from '@/components/Link'
+import '@/styles/main.css'
 
 interface SummaryProps {
   title: string
-  date: Date
-  description: string
+  date: string
+  description?: string
   link: string
-  img?: FixedObject
+  img?: FluidObject
 }
 
 interface Props {
   summaries: SummaryProps[]
-  className: string
+  styles: {
+    frame: string
+    inner: string
+    title: string
+    description?: string
+  }
 }
 
-const Summaries = ({ summaries, className }: Props) => {
+const Summaries = ({ summaries, styles }: Props) => {
+  const { frame, inner, title: tlStyle, description: ds } = styles
+  const fr = `${frame} cursor-pointer`
+  const tl = `${tlStyle} inline-block menu-hover`
   return (
     <>
-      {summaries.map(({ img, date, title, description, link }) => {
+      {summaries.map(({ img, date, title, description, link }, index) => {
         return (
-          <div className={className}>
-            {img !== undefined && <Img fixed={img} alt="summary-image" />}
-            <div className="px-6 py-8">
-              <h2>{date.toDateString()}</h2>
-              <p>{title}</p>
-              <p>{description}</p>
-              <p>{link}</p>
+          <Link key={index} to={link}>
+            <div className={fr}>
+              {img !== undefined && <Img fluid={img} alt="summary-image" />}
+              <div className={inner}>
+                <p className="text-xs mb-2 text-gray-600">
+                  {new Date(date).toLocaleString()}
+                </p>
+                <h2 className={tl}>{title}</h2>
+                {description !== undefined && (
+                  <p className={ds}>{description}</p>
+                )}
+              </div>
             </div>
-          </div>
+          </Link>
         )
       })}
     </>

@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import Anchor from '@/components/Anchor'
 
 import '@/styles/header.css'
+import '@/styles/main.css'
 
 interface Props {
   siteTitle: string

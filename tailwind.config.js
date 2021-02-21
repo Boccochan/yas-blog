@@ -13,7 +13,7 @@ module.exports = {
       md: '16px',
       lg: '24px',
       xl: '48px',
-      'latest-summary': '300px',
+      'blog-summary-md': '300px',
       'blog-summary': '600px',
       'blog-list-summary': '240px',
     },

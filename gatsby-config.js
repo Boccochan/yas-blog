@@ -17,6 +17,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -41,12 +48,7 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: `${__dirname}/src/components/layout.tsx`,
-    //   },
-    // },
     `gatsby-plugin-netlify`,
+    `gatsby-transformer-remark`,
   ],
 }
