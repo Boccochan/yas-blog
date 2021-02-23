@@ -2,6 +2,7 @@
 title: css grid layout
 date: "2020-07-18T21:40:32.169Z"
 description: How to use grid layout
+lang: "en"
 ---
 
 Let's see how to do the grid layout.

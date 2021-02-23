@@ -2,6 +2,7 @@
 title: Part1, How to design css. What is the good css design.
 date: "2020-08-02T12:40:32.169Z"
 description: Basics for designing css
+lang: "en"
 ---
 
 Designing css is not easy. Since css elements are global which means that they could be applied for each HTML elements, css might be going to be chaos. So, we are considering what is the good css design here.

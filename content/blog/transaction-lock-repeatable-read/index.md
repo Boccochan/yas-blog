@@ -2,6 +2,7 @@
 title: Thinking transaction isolation level and lock
 date: "2020-09-06T21:40:32.169Z"
 description: How to run transaction and protect record
+lang: "en"
 ---
 
 I did not understand DB transction. I thouhgt that DB transaction locks and protects query.

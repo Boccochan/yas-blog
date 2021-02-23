@@ -2,6 +2,7 @@
 title: Let's make a simple breadcrumbs in Gatsby with typescript
 date: "2020-08-01T11:40:32.169Z"
 description: It's not that difficult to create breadcrums!
+lang: "en"
 ---
 
 ## What is breadcrumbs?

@@ -2,6 +2,7 @@
 title: TypeError Cannot read property 'component---src-pages-index-tsx' of undefined
 date: "2020-07-15T21:40:32.169Z"
 description: How to fix this error
+lang: "en"
 ---
 
 I encountered this error

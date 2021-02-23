@@ -3,6 +3,7 @@ title: プログラミングは頭が悪くてもできるのか？文系とか�
 date: "2021-02-15T12:40:32.169Z"
 description: プログラミングやりたいですか？頭が悪くから、文系だからと自信がない方へ
 featuredImage: ./top.jpg
+lang: "ja"
 ---
 
 <p class="mt-8 mb-8">

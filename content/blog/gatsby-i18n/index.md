@@ -3,6 +3,7 @@ title: Gatsby＋Typescriptで多言語対応(i18n)
 date: "2021-02-08T11:40:32.169Z"
 description: Gatsby＋Typescriptで多言語対応(i18n)
 featuredImage: ./world.jpg
+lang: "ja"
 ---
 
 ## Gatsby＋Typescriptで多言語対応(i18n)

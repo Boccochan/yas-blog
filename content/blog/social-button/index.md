@@ -2,6 +2,7 @@
 title: How to put twitter and facebook button in React
 date: "2020-07-27T21:40:32.169Z"
 description: Let's put twitter and facebook button in React. It's easy!
+lang: "en"
 ---
 
 ## Installing a plugin
