@@ -3,6 +3,7 @@ title: 【最新】Gatsby+NetlifyでGoogle Analyticsを設定する
 date: "2021-02-04T11:40:32.169Z"
 description: すでにアカウントを持っている場合について説明
 featuredImage: ./logo.png
+lang: "ja"
 ---
 
 ## 【最新】GatsbyでGoogle Analyticsを設定する

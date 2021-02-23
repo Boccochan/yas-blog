@@ -3,6 +3,7 @@ title: Gatsby+Tailwindでレスポンシブデザイン
 date: "2021-02-07T11:40:32.169Z"
 description: Gatsby+tailwind+PostCSSでレスポンシブデザイン(media query)に対応する
 featuredImage: ./tailwind.png
+lang: "ja"
 ---
 
 ## Gatsby+Tailwindでレスポンシブデザイン

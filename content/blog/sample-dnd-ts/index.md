@@ -2,6 +2,7 @@
 title: sample react-dnd with typescript
 date: "2020-09-13T11:40:32.169Z"
 description: How to use react-dnd with typescript
+lang: "en"
 ---
 
 react-dnd is pretty popular package, but it was a bit difficult to know how to use for me.

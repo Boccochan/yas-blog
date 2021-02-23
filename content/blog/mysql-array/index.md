@@ -2,6 +2,7 @@
 title: How to pass array to INSERT query for MySql
 date: "2020-09-09T11:40:32.169Z"
 description: The way to pass array by Typescript and MySQL
+lang: "en"
 ---
 
 ## Table

@@ -2,6 +2,7 @@
 title: Putting titles on code blocks of Gatsby markdown
 date: "2020-07-26T21:40:32.169Z"
 description: How to put a file name on code blocks.
+lang: "en"
 ---
 
 ## Installing plugin

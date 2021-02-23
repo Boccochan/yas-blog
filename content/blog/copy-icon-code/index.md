@@ -2,6 +2,7 @@
 title: How to add copy icon to code blocks of markdown for Gatsby with Typescript
 date: "2020-07-11T21:40:32.169Z"
 description: I am going to tell you how to add copy icon to code block and apply a style.
+lang: "en"
 ---
 
 ## Installing a plugin

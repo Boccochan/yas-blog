@@ -2,6 +2,7 @@
 title: Part2, How to design css. What is the good css design.
 date: "2020-08-05T22:40:32.169Z"
 description: How to design css, and decide names.
+lang: "en"
 ---
 
 In the previous part, we studied the foundamental idea of designing css. We are going to study how to implement them.

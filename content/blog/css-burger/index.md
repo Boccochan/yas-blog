@@ -2,6 +2,7 @@
 title: Let's make a burger by css
 date: "2020-07-20T21:40:32.169Z"
 description: You can make a burger by css
+lang: "en"
 ---
 
 You can create a burger by css.

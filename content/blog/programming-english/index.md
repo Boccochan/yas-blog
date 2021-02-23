@@ -3,6 +3,7 @@ title: 【初心者向け】プログラミングに英語は必要です。
 date: "2021-02-20T13:40:37+09:00"
 description: ソフトウェアは海の向こうからやってくる
 featuredImage: ./image-top.jpg
+lang: "ja"
 ---
 
 

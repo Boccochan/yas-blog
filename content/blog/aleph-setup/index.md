@@ -3,6 +3,7 @@ title: Aleph.jsとは。Denoで動くReactフレームワークです。
 date: "2021-02-03T11:40:32.169Z"
 description: Aleph.jsについて紹介します
 featuredImage: ./top.png
+lang: "ja"
 ---
 
 ## Aleph.jsとは。Denoで動くReactフレームワークです。

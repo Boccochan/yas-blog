@@ -3,6 +3,7 @@ title: プログラミングとは？　初心者でも簡単に分かる
 date: "2021-01-24T11:40:32.169Z"
 description: 初心者でも簡単に分かる
 featuredImage: ./top-img-min.jpg
+lang: "ja"
 ---
 
 ## プログラミングとは？　初心者でも簡単に分かる

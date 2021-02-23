@@ -2,6 +2,7 @@
 title: Use original URL on Netlify
 date: "2020-07-12T21:40:32.169Z"
 description: How to set original URL
+lang: "en"
 ---
 
 If you don't set custom domain, the URL will be something like https://amazing-nobel-819f94.netlify.app. You can use original domain name. I am going to tell you how to do it.
