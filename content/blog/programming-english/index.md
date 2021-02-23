@@ -70,10 +70,13 @@ lang: "ja"
 
 例えば、以下の文章を見てみましょう
 
-
+<blockquote>
+<p>
 Part of what makes Gatsby sites so fast is that a lot of the work is done at build time. During that process, Gatsby creates paths to access content, handling routing for you. Navigating in a Gatsby app requires an understanding of what those paths are and how they’re generated.
 
 This section of guides show you the different ways to create pages in Gatsby, how to handle navigation between and within pages, how to create a shared layout, and how to compose content:
+</p>
+</blockquote>
 
 
 技術系の文章によく出てくる単語は、fast, make, build, process, path, access, handle, route, how to ～, requireなどです。もっと他に沢山ありますが、記事を沢山読んでいくと似たような単語が使われていることに気づくと思います。
@@ -92,20 +95,32 @@ This section of guides show you the different ways to create pages in Gatsby, ho
 以下はStripeという会社が提供しているWeb APIの一文です。
 
 
+<blockquote>
+<p>
 void: This invoice was a mistake, and should be canceled.
-
+</p>
+</blockquote>
 
 これだけだと、voidが何なのかが分かりません。そこで、void状態を知るために別の文章を読んでみます。
 
+<blockquote>
+<p>
 Voiding invoices 
-
+</p>
+<p>
 To cancel, delete, or reverse an invoice that’s already been finalized, you can void it. Voiding an invoice is similar to deleting it, but maintains a record of when it was created, finalized, and voided. Invoices with a void status aren’t payable. Voiding an invoice effectively zeroes out its amounts in any reports, ensuring an accounting papertrail.
+</p>
+</blockquote>
 
 これだけだと、まだ混乱します。voidというのは何やら動詞っぽく使われています。voidという操作は注文をキャンセルできるっぽいですね。しかし、その一方でvoidというステートもあるようです。こちらは動詞ではなく、名詞として使われています。voidという操作をした結果、voidというステートになるのかな？と感じるのですが、それだと'should be chancled'の文脈がよくわかりません(いろんな意味に捉えることができる)。よくわからんので、もう少し他の文章を読んでみると、以下の機能を見つけました。
 
+<blockquote>
+<p>
 Void an invoice
-
+</p>
+<p>
 Mark a finalized invoice as void. This cannot be undone. Voiding an invoice is similar to deletion, however it only applies to finalized invoices and maintains a papertrail where the invoice can still be found.
+</blockquote>
 
 Void an invoiceという機能があることから、おそらくvoidというアクションを実行すると、注文がvoidというステートになり、そのうちその注文がキャンセルとして処理されるのかな、と予測できます。
 

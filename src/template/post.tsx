@@ -6,6 +6,8 @@ import SEO from '@/components/Seo'
 import Bio from '@/components/Blog/Bio'
 import { useTranslation } from 'react-i18next'
 import { usePageContext } from '@/i18n/PageContext'
+import Img from 'gatsby-image'
+import '@/styles/blog.scss'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -19,7 +21,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
         featuredImage {
           childImageSharp {
@@ -50,13 +52,21 @@ const Post = ({ data, pageContext }: Props) => {
     <Layout>
       <SEO title="Blog" description={description} />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-full">
-        <div className="col-span-2 h-full md:pr-4">
-          <p>{date}</p>
-          <h1>{title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="col-span-2 h-full bg-white p-1 md:p-8">
+          <p className="text-sm text-gray-500">
+            {new Date(date).toLocaleString()}
+          </p>
+          <h1 className="text-3xl my-4">{title}</h1>
+          {fluid !== undefined && (
+            <div className="mb-8">
+              <Img fluid={fluid} alt="top-image" />
+            </div>
+          )}
+
+          <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <div className="col-span-2 h-full md:col-span-1">
-          <p className="text-xl mb-3 text-gray-600">{t('about-author')}</p>
+          {/* <p className="text-xl mb-3 text-gray-600">{t('about-author')}</p> */}
           <Bio />
         </div>
       </div>

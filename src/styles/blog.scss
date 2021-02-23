@@ -1,0 +1,177 @@
+.blog {
+  p {
+    @apply mb-8 leading-7;
+  }
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply mb-2;
+  }
+  h2 {
+    @apply text-xl font-bold;
+  }
+  h2 {
+    padding: 0.5em; /*文字周りの余白*/
+    color: #494949; /*文字色*/
+    // background: #f6f3f3; /*背景色*/
+    border-bottom: 2px solid #f6f3f3;
+    border-left: solid 5px #7db4e6; /*左線（実線 太さ 色）*/
+  }
+  h3,
+  h4 {
+    padding-bottom: 0.3em;
+    padding: 0.25em 0.5em; /*上下 左右の余白*/
+    color: #494949; /*文字色*/
+    background: transparent; /*背景透明に*/
+    border-left: solid 5px #7db4e6; /*左線*/
+  }
+  blockquote {
+    p {
+      @apply mb-0 leading-7;
+    }
+    @apply p-2 bg-gray-100 mb-8;
+  }
+  a {
+    box-shadow: none;
+    text-decoration: none;
+    color: #1941d2;
+  }
+  .amazon {
+    padding: 1em 2%;
+    overflow: hidden;
+    .left {
+      float: left;
+    }
+    h5 {
+      margin: 0;
+      padding: 0;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    .summary {
+      padding: 0 3em;
+      max-width: 320px;
+    }
+    .af-list {
+      clear: both;
+    }
+    .hardcover {
+      background-color: #e47911;
+    }
+    .kindle {
+      background-color: #565a5c;
+    }
+    .btn {
+      width: 8em;
+      height: 2em;
+      text-align: center;
+      display: table;
+      width: 8em;
+      border-radius: 4px;
+      margin-top: 0.3em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+
+      a {
+        height: 3em;
+        color: #f3f5f6;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+  ol.cap_list {
+    list-style-type: decimal;
+    padding: 1em;
+
+    li {
+      padding: 0.5em 1em;
+    }
+  }
+
+  ul.cp_list {
+    padding: 0.5em;
+    list-style-type: none;
+  }
+  ul.cp_list li {
+    position: relative;
+    padding: 0.3em 0.3em 0.3em 1.3em;
+  }
+  ul.cp_list li:after,
+  ul.cp_list li:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: #ffc107;
+    top: 0.43em;
+    left: 0.5em;
+    height: 11px;
+    width: 4px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+  }
+  ul.cp_list li:before {
+    top: 0.6em;
+    left: 0.2em;
+    height: 8px;
+    transform: rotate(-45deg);
+  }
+  .blog-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    .inner {
+      padding: 0.4em 2em 2em 2em;
+      width: 480px;
+      background-color: #f3f5f6;
+      border-radius: 0.5em;
+
+      ol {
+        list-style-type: decimal;
+      }
+      li {
+        padding: 0.5em 1em;
+      }
+      p {
+        color: #4b4b4b;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 0.4em;
+      }
+      a {
+        color: #4b4b4b;
+        box-shadow: none;
+        font-weight: 700;
+        font-size: 0.9em;
+      }
+      a:hover {
+        color: #828282;
+      }
+      .top-ol {
+        counter-reset: li; /* li のカウンタを 0 にセット */
+        list-style: none;
+      }
+      .top-li:before {
+        padding-right: 1em;
+
+        color: #03a9f4;
+        font-weight: bold;
+        counter-increment: li; /* li の数を一つずつ増加 */
+        content: counter(li) '. '; /* 数を表示 */
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  table th,
+  table td {
+    border: solid 1px black;
+    padding: 10px;
+    /*実線 1px 黒*/
+  }
+}
