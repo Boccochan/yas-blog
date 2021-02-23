@@ -5,6 +5,7 @@ import Layout from '@/components/Layout'
 import SEO from '@/components/Seo'
 import Bio from '@/components/Blog/Bio'
 import { useTranslation } from 'react-i18next'
+import { usePageContext } from '@/i18n/PageContext'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -22,7 +23,7 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1200) {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -13,6 +13,8 @@ const Anchor = ({ to, children, className }: Props) => {
   const { lang } = usePageContext()
   const { pathname } = useLocation()
 
+  console.log(222, lang)
+
   const nextPath = `/${lang}${to}`
   const style = pathname === nextPath ? `${className} text-blue-700` : className
 

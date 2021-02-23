@@ -64,6 +64,7 @@ exports.onCreatePage = async ({
           lang,
         },
       })
+      // }
     })
   )
 

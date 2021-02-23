@@ -5,6 +5,9 @@ interface Post {
     fields: {
       slug: string
     }
+    frontmatter: {
+      lang: string
+    }
   }
 }
 
@@ -50,6 +53,7 @@ export const createPages: GatsbyCreatePages = async ({
             }
             frontmatter {
               title
+              lang
             }
           }
         }
@@ -67,15 +71,20 @@ export const createPages: GatsbyCreatePages = async ({
   posts.forEach((post: Post, index: number) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
+    const lang =
+      post.node.frontmatter.lang === undefined
+        ? 'ja'
+        : post.node.frontmatter.lang
 
     createPage({
-      path: `/blogs${post.node.fields.slug}`,
+      path: `/${lang}/blogs${post.node.fields.slug}`,
       // tslint:disable-next-line:object-literal-sort-keys
       component: path.resolve(`./src/template/post.tsx`),
       context: {
         next,
         previous,
         slug: post.node.fields.slug,
+        lang,
       },
     })
   })

@@ -1897,6 +1897,7 @@ export interface SitePageContext {
   slug?: Maybe<Scalars['String']>
   previous?: Maybe<SitePageContextPrevious>
   next?: Maybe<SitePageContextNext>
+  lang?: Maybe<Scalars['String']>
 }
 
 export interface SitePageContextFilterInput {

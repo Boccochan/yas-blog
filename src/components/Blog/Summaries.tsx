@@ -2,13 +2,14 @@ import React from 'react'
 import { FluidObject } from 'gatsby-image'
 import Img from 'gatsby-image'
 import Link from '@/components/Link'
+
 import '@/styles/main.css'
 
 interface SummaryProps {
   title: string
   date: string
   description?: string
-  link: string
+  slug: string
   img?: FluidObject
 }
 
@@ -28,9 +29,9 @@ const Summaries = ({ summaries, styles }: Props) => {
   const tl = `${tlStyle} inline-block menu-hover`
   return (
     <>
-      {summaries.map(({ img, date, title, description, link }, index) => {
+      {summaries.map(({ img, date, title, description, slug }, index) => {
         return (
-          <Link key={index} to={link}>
+          <Link key={index} to={`/blogs${slug}`}>
             <div className={fr}>
               {img !== undefined && <Img fluid={img} alt="summary-image" />}
               <div className={inner}>
