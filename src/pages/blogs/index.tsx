@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const query = graphql`
-  query MyQuery {
+  query MyQuerySummary {
     allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: {}

@@ -5,9 +5,26 @@ require('ts-node').register({ files: true })
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// You can delete this file if you're not using it
 const config = require('./gatsby-config')
+require('source-map-support').install()
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
+
+exports.createPages = require('./src/template/createPosts').createPages
+
 /**
  * Makes sure to create localized paths for each file in the /pages folder.
  * For example, pages/404.js will be converted to /en/404.js and /el/404.js and
