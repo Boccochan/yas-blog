@@ -49,7 +49,22 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              withWebp: true,
+              showCaptions: false,
+              quality: 100,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
