@@ -153,11 +153,11 @@
       a:hover {
         color: #828282;
       }
-      .top-ol {
+      .top-ol-1 {
         counter-reset: li; /* li のカウンタを 0 にセット */
         list-style: none;
       }
-      .top-li:before {
+      .top-li-1:before {
         padding-right: 1em;
 
         color: #03a9f4;
