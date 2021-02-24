@@ -107,7 +107,7 @@ WindowsではコマンドプロンプトやPower Shell、Macではzshという�
 Windowsは、アメリカのマイクロソフト社が開発、販売しているOSであり、パソコン市場のトップシェアを誇るOSです。
 </p>
 
-<p><strong>長所</strong></p>
+<p class='cp_list'><strong>長所</strong></p>
 <ul class='cp_list'>
   <li>Windows搭載機は安いものから高いものまであり、価格帯が幅広い</li>
   <li>種類が豊富なので、自分が欲しいスペックのものを見つけやすい</li>
@@ -117,7 +117,7 @@ Windowsは、アメリカのマイクロソフト社が開発、販売してい�
   <li>会社員といえばWindows</li>
 </ul>
 
-<p><strong>短所</strong></p>
+<p class='cp_list'><strong>短所</strong></p>
 <ul class='cp_list'>
   <li>Linux系のツール使うとき、いろいろセットアップが面倒くさい</li>
 </ul>
@@ -147,7 +147,7 @@ Windowsだけじゃダメなのか、と疑問に思う方もいらっしゃる�
 OS Xは、アメリカのApple社が開発しているOSでありMacに搭載されています。Web系の開発者やデザイナーに人気のパソコンです。
 </p>
 
-<p><strong>長所</strong></p>
+<p class='cp_list'><strong>長所</strong></p>
 <ul class="cp_list">
   <li>カフェや空港でMacbook開いている人はオシャレ(偏見)</li>
   <li>Unix系のコマンドが最初から使える</li>
@@ -156,7 +156,7 @@ OS Xは、アメリカのApple社が開発しているOSでありMacに搭載さ
   <li>その気になればWindowsも動かすことができる</li>
 </ul>
   
-<p><strong>短所</strong></p>
+<p class='cp_list'><strong>短所</strong></p>
 <ul class="cp_list">
   <li>プログラミング以外の目的で使おうとした場合、稀に問題が起こる</li>
   <li>Windowsに慣れすぎている人には最初操作を覚えるのが辛い</li>
@@ -196,14 +196,14 @@ Macの魅力は、Unix系のツールがデフォルトで使えるという点�
 さて、記事の最初の方で「例外」について触れました。その例外とはiPhoneアプリを作りたい、という場合です。Windowsでも無理をすれば多少できるかもしれませんが、あきらかにMacを使った方がよいです。iPhoneアプリを開発したいのであれば素直にMacを買いましょう。
 </p>
 
-<p>以下の傾向がある人はWindows 10</p>
+<p class='cp_list'><strong>以下の傾向がある人はWindows 10</strong></p>
 <ul class="cp_list">
   <li>iPhoneアプリに興味がない</li>
   <li>プログラミングやめた後も仕事や就活でパソコン使いたい</li>
   <li>時間よりもお金を節約したい</li>
 </ul>
 
-<p>以下の傾向がある人はMac</p>
+<p class='cp_list'><strong>以下の傾向がある人はMac</strong></p>
 <ul class="cp_list">
   <li>オシャレなものが好き</li>
   <li>スマホアプリに興味あり</li>

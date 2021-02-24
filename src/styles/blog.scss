@@ -89,10 +89,13 @@
       padding: 0.5em 1em;
     }
   }
-
+  p.cp_list {
+    @apply mb-0;
+  }
   ul.cp_list {
     padding: 0.5em;
     list-style-type: none;
+    margin-bottom: 0.5em;
   }
   ul.cp_list li {
     position: relative;
@@ -130,9 +133,10 @@
 
       ol {
         list-style-type: decimal;
+        padding-left: 2em;
       }
       li {
-        padding: 0.5em 1em;
+        padding: 0.4em 0.5em;
       }
       p {
         color: #4b4b4b;
