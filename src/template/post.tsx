@@ -8,6 +8,14 @@ import { useTranslation } from 'react-i18next'
 import { usePageContext } from '@/i18n/PageContext'
 import Img from 'gatsby-image'
 import '@/styles/blog.scss'
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from 'react-share'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -47,6 +55,7 @@ const Post = ({ data, pageContext }: Props) => {
     md.frontmatter!.featuredImage == null
       ? undefined
       : md.frontmatter!.featuredImage.childImageSharp.fluid
+  const url = location.href ? location.href : ''
 
   return (
     <Layout>
@@ -57,6 +66,17 @@ const Post = ({ data, pageContext }: Props) => {
             {new Date(date).toLocaleString()}
           </p>
           <h1 className="text-3xl my-4">{title}</h1>
+          <div className="py-4 border-t border-gray-200 border-solid">
+            <FacebookShareButton url={url}>
+              <FacebookIcon size={32} />
+            </FacebookShareButton>
+            <TwitterShareButton url={url} title={title} className="ml-2">
+              <TwitterIcon size={32} />
+            </TwitterShareButton>
+            <LinkedinShareButton url={url} title={title} className="ml-2">
+              <LinkedinIcon size={32} />
+            </LinkedinShareButton>
+          </div>
           {fluid !== undefined && (
             <div className="mb-8">
               <Img fluid={fluid} alt="top-image" />
@@ -66,7 +86,6 @@ const Post = ({ data, pageContext }: Props) => {
           <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <div className="col-span-2 h-full md:col-span-1">
-          {/* <p className="text-xl mb-3 text-gray-600">{t('about-author')}</p> */}
           <Bio />
         </div>
       </div>
