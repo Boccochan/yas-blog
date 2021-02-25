@@ -4,6 +4,7 @@ date: "2021-02-02T11:40:32.169Z"
 description: Codepenを使ってHTMLを学習しよう。
 featuredImage: ./top.jpg
 lang: "ja"
+feature: true
 ---
 
 ## 独学でプログラミングを勉強する方法。HTML編。(第三回)

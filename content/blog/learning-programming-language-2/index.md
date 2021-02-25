@@ -4,6 +4,7 @@ date: "2021-02-01T11:40:32.169Z"
 description: 独学でプログラミングを勉強。調べ方を学ぼう
 featuredImage: ./code-2.jpg
 lang: "ja"
+feature: true
 ---
 
 ## 独学でプログラミングを勉強する方法。(第二回)

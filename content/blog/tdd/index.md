@@ -2,7 +2,9 @@
 title: ソフトウェアの品質を保ちつつテスト工程を減らすには？
 date: "2021-02-14T12:40:32.169Z"
 description: いろいろなテスト手法が提案されていますが、どういったものが効率がよいのか考察します。
+featuredImage: ./top.jpg
 lang: "ja"
+feature: true
 ---
 
 <p class="mt-8 mb-8">

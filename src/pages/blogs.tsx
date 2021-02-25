@@ -29,6 +29,7 @@ export const pageQuery = graphql`
             date
             description
             lang
+            feature
             featuredImage {
               childrenImageSharp {
                 fluid(maxWidth: 800, maxHeight: 500) {
@@ -53,26 +54,46 @@ const BlogPage = ({ data, pageContext }: Props) => {
       edge!.node!.frontmatter!.featuredImage != null
   )
 
-  const summaries = filtered.slice(0, 4).map(({ node }) => {
-    const { title, date, description } = node.frontmatter!
-    return {
-      title: title as string,
-      date: date as string,
-      description: description as string,
-      slug: node!.fields!.slug as string,
-      img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
-    }
-  })
+  const summaries = data
+    .allMarkdownRemark!.edges.filter(
+      ({ node }) => node.frontmatter!.feature === true
+    )
+    .map(({ node }) => {
+      const { title, date, description } = node.frontmatter!
+      return {
+        title: title as string,
+        date: date as string,
+        description: description as string,
+        slug: node!.fields!.slug as string,
+        img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
+      }
+    })
 
-  const latests = filtered.slice(4, 8).map(({ node }) => {
-    const { title, date } = node.frontmatter!
-    return {
-      title: title as string,
-      date: date as string,
-      slug: node!.fields!.slug as string,
-      img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
-    }
-  })
+  const latests = filtered
+    .filter(({ node }) => node.frontmatter!.feature !== true)
+    .slice(0, 4)
+    .map(({ node }) => {
+      const { title, date } = node.frontmatter!
+      return {
+        title: title as string,
+        date: date as string,
+        slug: node!.fields!.slug as string,
+        img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
+      }
+    })
+
+  const blogs = filtered
+    .filter(({ node }) => node.frontmatter!.feature !== true)
+    .slice(4)
+    .map(({ node }) => {
+      const { title, date } = node.frontmatter!
+      return {
+        title: title as string,
+        date: date as string,
+        slug: node!.fields!.slug as string,
+        img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
+      }
+    })
 
   return (
     <Layout>
@@ -109,7 +130,7 @@ const BlogPage = ({ data, pageContext }: Props) => {
       <p className="text-xl mb-3 text-gray-500">{t('blog-list')}</p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full">
         <Summaries
-          summaries={latests}
+          summaries={blogs}
           styles={{
             frame: 'h-blog-list-summary bg-white',
             inner: 'px-2 py-1',
