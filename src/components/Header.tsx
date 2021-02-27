@@ -17,11 +17,6 @@ const Menu = () => (
       </Anchor>
     </li>
     <li>
-      <Anchor to="/lab" className="menu menu-hover">
-        Laboratory
-      </Anchor>
-    </li>
-    <li>
       <Anchor to="/contact" className="menu menu-hover">
         Contact
       </Anchor>
