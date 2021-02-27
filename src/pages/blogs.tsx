@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SEO from '@/components/Seo'
 import Layout from '@/components/Layout'
 import Bio from '@/components/Blog/Bio'
-import Summaries from '@/components/Blog/Summaries'
+import Summaries, { SummaryProps } from '@/components/Blog/Summaries'
 import { useTranslation } from 'react-i18next'
 import { graphql, PageRendererProps } from 'gatsby'
 import { Query, SitePageContext } from '@/types/graphql-types'
@@ -46,6 +46,8 @@ export const pageQuery = graphql`
 
 const BlogPage = ({ data, pageContext }: Props) => {
   const [t] = useTranslation()
+  const [blogs, setBlogs] = useState<SummaryProps[]>([])
+
   console.log(data)
 
   const filtered = data.allMarkdownRemark!.edges.filter(
@@ -82,18 +84,49 @@ const BlogPage = ({ data, pageContext }: Props) => {
       }
     })
 
-  const blogs = filtered
+  const maxCount = filtered
     .filter(({ node }) => node.frontmatter!.feature !== true)
-    .slice(4)
-    .map(({ node }) => {
-      const { title, date } = node.frontmatter!
-      return {
-        title: title as string,
-        date: date as string,
-        slug: node!.fields!.slug as string,
-        img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
-      }
-    })
+    .slice(4).length
+
+  const onSeeMore = () => {
+    const count = maxCount - blogs.length > 8 ? blogs.length + 8 : maxCount
+    console.log(count)
+    setBlogs(
+      filtered
+        .filter(({ node }) => node.frontmatter!.feature !== true)
+        .slice(4, 4 + count)
+        .map(({ node }) => {
+          const { title, date } = node.frontmatter!
+          return {
+            title: title as string,
+            date: date as string,
+            slug: node!.fields!.slug as string,
+            img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
+          }
+        })
+    )
+    console.log('Hello', blogs)
+  }
+
+  useEffect(() => {
+    const count = maxCount - blogs.length > 8 ? blogs.length + 8 : maxCount
+
+    console.log(filtered)
+    setBlogs(
+      filtered
+        .filter(({ node }) => node.frontmatter!.feature !== true)
+        .slice(4, 4 + count)
+        .map(({ node }) => {
+          const { title, date } = node.frontmatter!
+          return {
+            title: title as string,
+            date: date as string,
+            slug: node!.fields!.slug as string,
+            img: node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid,
+          }
+        })
+    )
+  }, [])
 
   return (
     <Layout>
@@ -137,6 +170,14 @@ const BlogPage = ({ data, pageContext }: Props) => {
             title: 'text-sm mb-3 font-bold',
           }}
         />
+        {maxCount > blogs.length && (
+          <div
+            onClick={onSeeMore}
+            className="bg-blue-600 text-center text-gray-100 md:w-6/12 xs:w-36 py-2 cursor-pointer"
+          >
+            <div>{t('see-more')}</div>
+          </div>
+        )}
       </div>
     </Layout>
   )

@@ -52,7 +52,7 @@ const Bio = () => {
           </a>
         </div>
       </div>
-      <div className="bg-blue-500 text-center text-gray-100 md:w-6/12 xs:w-36 py-2 cursor-pointer">
+      <div className="bg-blue-600 text-center text-gray-100 md:w-6/12 xs:w-36 py-2 cursor-pointer">
         <Link to="/">{t('go-to-cv')}</Link>
       </div>
     </div>

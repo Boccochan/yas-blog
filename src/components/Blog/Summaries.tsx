@@ -5,7 +5,7 @@ import Link from '@/components/Link'
 
 import '@/styles/main.css'
 
-interface SummaryProps {
+export interface SummaryProps {
   title: string
   date: string
   description?: string
