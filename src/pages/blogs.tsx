@@ -121,7 +121,7 @@ const BlogPage = ({ data, pageContext }: Props) => {
               frame: 'h-blog-summary-md md:h-blog-summary bg-white mb-8',
               inner: 'px-2 py-2 md:px-6 md:py-8',
               title: 'text-md md:text-xl mb-3 font-bold',
-              description: 'text-sm md:text-normal',
+              description: 'text-xs md:text-normal',
             }}
           />
         </div>
@@ -134,9 +134,9 @@ const BlogPage = ({ data, pageContext }: Props) => {
           <Summaries
             summaries={latests}
             styles={{
-              frame: 'h-blog-list-summary md:h-blog-summary-md bg-white mb-8',
+              frame: 'h-blog-list-xs md:h-blog-summary-md bg-white mb-8',
               inner: 'px-2 py-2',
-              title: 'text-sm md:text-md mb-3 font-bold',
+              title: 'text-xs mb-3 font-bold',
             }}
           />
         </div>
@@ -146,9 +146,9 @@ const BlogPage = ({ data, pageContext }: Props) => {
         <Summaries
           summaries={blogs}
           styles={{
-            frame: 'h-blog-list-summary bg-white',
+            frame: 'h-blog-list-xs md:h-blog-list-md bg-white',
             inner: 'px-2 py-1',
-            title: 'text-sm mb-3 font-bold',
+            title: 'text-xs mb-3 font-bold',
           }}
         />
         {maxCount > blogs.length && (
