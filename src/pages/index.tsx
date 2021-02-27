@@ -10,15 +10,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Yasuhiro Ito" />
-      <h1 className="text-3xl">{t('blog')}</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div className="max-w-xs mb-6">
-        <Image />
-      </div>
-      <Link className="underline text-blue-500" to="/page-2/">
-        Go to page 2
-      </Link>
+      <h1 className="text-2xl mb-4">{t('author')}</h1>
+      <h2 className="text-xl mb-4">{t('title')}</h2>
+      <p className="text-sm">{t('self-summary')}</p>
     </Layout>
   )
 }
