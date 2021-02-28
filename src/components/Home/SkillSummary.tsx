@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import {
   Radar,
@@ -46,6 +46,7 @@ const SkillSummary = () => {
   const [cy, setGraphCy] = useState('50%')
   const [outerRadius, setRadiusSize] = useState(100)
   const [height, setGraphHeight] = useState(300)
+  const [width, setWidth] = useState(400)
 
   const skills = [
     {
@@ -74,23 +75,41 @@ const SkillSummary = () => {
     },
   ]
 
+  const resizeWindow = () => {
+    const innerWidth = window.innerWidth
+
+    if (innerWidth < 768) {
+      console.log(2222, innerWidth)
+      setGraphCy('45%')
+      setRadiusSize(80)
+      // 0.8 is needed since some smartphone does not return proper width
+      setWidth(innerWidth * 0.8)
+      setGraphHeight(220)
+    }
+  }
+
+  useEffect(() => {
+    resizeWindow()
+    window.addEventListener('resize', resizeWindow)
+    return () => window.removeEventListener('resize', resizeWindow)
+  }, [])
   return (
     <RadarChart
       cx="50%"
       cy={cy}
       outerRadius={outerRadius}
-      width={400}
+      width={width}
       height={height}
       data={skills}
     >
       <PolarGrid />
-      <PolarAngleAxis dataKey="subject" />
+      <PolarAngleAxis dataKey="subject" tick={customTick} />
       <PolarRadiusAxis domain={[0, 5]} />
       <Radar
         name="Yasuhiro"
         dataKey="level"
-        // stroke={theme.colors.blue}
-        // fill={theme.colors.blue}
+        stroke={'#23C4F8'}
+        fill={'#23C4F8'}
         fillOpacity={0.7}
       />
     </RadarChart>
