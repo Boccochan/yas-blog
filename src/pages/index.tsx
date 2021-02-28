@@ -13,7 +13,7 @@ const IndexPage = () => {
       <SEO title="Yasuhiro Ito" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
         <div className="col-span-1 h-full md:pr-4 mb-8">
-          <h1 className="text-xl md:text-2xl mb-4">{t('author')}</h1>
+          <h1 className="text-xl md:text-2xl mb-10">{t('author')}</h1>
           <h2 className="text-sm text-gray-700 mb-4">
             {t('title')}@{t('location')}
           </h2>
@@ -22,7 +22,9 @@ const IndexPage = () => {
         </div>
         <div className="col-span-1 h-full">
           <h1 className="text-xl md:text-2xl mb-4">{t('skill-summary')}</h1>
-          <SkillSummary />
+          <div className="flex items-center justify-center">
+            <SkillSummary />
+          </div>
         </div>
       </div>
     </Layout>
