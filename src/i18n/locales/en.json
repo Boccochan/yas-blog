@@ -34,5 +34,8 @@
   "education-unv": "Aichi Institue of Technology Electrical Engineering 2001 - 2005",
   "education-lang": "London Language School 2016 - 2017",
   "language": "Japanese (Native), English (fluent)",
-  "location": "Tokyo, Japan"
+  "location": "Tokyo, Japan",
+  "r-and-d": "Research and Development",
+  "r-and-d-description": "I believe that the most of software is developed on cloud which can scale on demand. It makes the development and releasing software faster than before. The waterfall model was not the best choice for cloud computing. So, we started to study DevOps and scrum, and we have introduced CI/CD, serverless and micro-service architecture. "
+
 }

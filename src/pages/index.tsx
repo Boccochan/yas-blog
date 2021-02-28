@@ -67,10 +67,10 @@ const IndexPage = ({ data }: Props) => {
             </div>
             <div className="col-span-1 h-full">
               <h1 className="text-black text-xl md:text-2xl font-bold mb-8">
-                技術者としての取り組み
+                {t('r-and-d')}
               </h1>
               <p className="text-black text-normal mb-2">
-                システムの主戦場がオンプレからクラウドへ移行したことにより、ソフトウェアのリリースサイクルがひと昔前よりも格段に短くなっています。仕様検討、開発、リリース、フィードバック、改善のループをいかに素早く回すかがプロジェクトの成功にとって重要になっています。そのような要求に耐えるべく、CI/CDの導入とテスト自動化、マイクロサービスアーキティクチャ、サーバレスアーキティクチャを導入し、開発手法は小さな機能を細かくリリースできるようにDevOpsチームにてスクラムを導入した開発手法を実践しております。
+                {t('r-and-d-description')}
               </p>
             </div>
           </div>
