@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SEO from '@/components/Seo'
 import Layout from '@/components/Layout'
-import Bio from '@/components/Blog/Bio'
+import Bio from '@/components/Bio'
 import Summaries, { SummaryProps } from '@/components/Blog/Summaries'
 import { useTranslation } from 'react-i18next'
 import { graphql, PageRendererProps } from 'gatsby'

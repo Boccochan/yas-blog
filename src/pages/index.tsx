@@ -4,7 +4,7 @@ import Image from '@/components/Image'
 import SEO from '@/components/Seo'
 import Layout from '@/components/Layout'
 import { useTranslation } from 'react-i18next'
-import Share from '@/components/Bio'
+import { Share } from '@/components/Bio'
 
 const IndexPage = () => {
   const [t] = useTranslation()
