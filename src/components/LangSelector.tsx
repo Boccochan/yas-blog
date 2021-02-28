@@ -10,8 +10,6 @@ const LangSelector = () => {
   const { i18n } = useTranslation()
   const [lang, setLang] = useState('English')
 
-  // const lang = i18n.language === 'ja' ? '日本語' : 'English'
-
   useEffect(() => {
     setLang(i18n.language === 'ja' ? '日本語' : 'English')
   }, [i18n.language])
