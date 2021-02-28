@@ -6,7 +6,7 @@ import { Share } from '@/components/Bio'
 import { graphql, PageRendererProps } from 'gatsby'
 import SkillSummary from '@/components/Home/SkillSummary'
 import { Query } from '@/types/graphql-types'
-import Img from 'gatsby-image'
+import Img, { FixedObject } from 'gatsby-image'
 
 interface Props extends PageRendererProps {
   data: Query
@@ -58,7 +58,7 @@ const IndexPage = ({ data }: Props) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
             <div className="col-span-1 h-full">
               <div className="hidden md:flex items-center justify-left">
-                <Img fixed={fixed} alt="top-image" />
+                <Img fixed={fixed as FixedObject} alt="top-image" />
               </div>
             </div>
             <div className="col-span-1 h-full">
