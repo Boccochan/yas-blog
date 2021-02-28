@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import Link from '@/components/Link'
-import { FaTwitter, FaGithub } from 'react-icons/fa'
+import Share from '@/components/Bio'
 
 const query = graphql`
   query {
@@ -36,21 +36,7 @@ const Bio = () => {
         <p className="text-gray-700">{t('summary')}</p>
       </div>
       <div className="mb-6">
-        <div className="mb-2">
-          <a href="https://github.com/Boccochan" className="flex items-center">
-            <FaGithub size="18px" />
-            <p className="pl-2 text-xs">Boccochan</p>
-          </a>
-        </div>
-        <div>
-          <a
-            href="https://twitter.com/yasuhiro_it"
-            className="flex items-center"
-          >
-            <FaTwitter size="18px" />
-            <p className="pl-2 text-xs">@yasuhiro_it</p>
-          </a>
-        </div>
+        <Share />
       </div>
       <div className="bg-blue-600 text-center text-gray-100 md:w-6/12 xs:w-36 py-2 cursor-pointer">
         <Link to="/">{t('go-to-cv')}</Link>
