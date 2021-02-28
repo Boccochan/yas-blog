@@ -70,7 +70,6 @@ const LangSelector = () => {
             >
               日本語
             </GatsbyLink>
-
             <GatsbyLink
               aria-label={`Change language to en`}
               to={`/en${originalPath}`}
