@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import Anchor from '@/components/Anchor'
-
+import LangSelector from '@/components/LangSelector'
 import '@/styles/header.css'
 import '@/styles/main.css'
 
@@ -40,6 +40,10 @@ const Header = ({ siteTitle }: Props) => {
           <ul className="hidden md:flex md:flex-row w-6/12">
             <Menu />
           </ul>
+
+          <div className="ml-auto h-full flex items-center justify-left">
+            <LangSelector />
+          </div>
         </nav>
       </header>
       {open && (
