@@ -26,8 +26,7 @@ export const pageQuery = graphql`
 
 const IndexPage = ({ data }: Props) => {
   const [t] = useTranslation()
-
-  console.log(data)
+  const fixed = data.file!.childImageSharp!.fixed!
 
   return (
     <Layout isMain={true}>
@@ -59,10 +58,7 @@ const IndexPage = ({ data }: Props) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
             <div className="col-span-1 h-full">
               <div className="hidden md:flex items-center justify-left">
-                <Img
-                  fixed={data.file!.childImageSharp!.fixed}
-                  alt="top-image"
-                />
+                <Img fixed={fixed} alt="top-image" />
               </div>
             </div>
             <div className="col-span-1 h-full">
