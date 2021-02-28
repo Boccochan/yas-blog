@@ -16,11 +16,6 @@ const Menu = () => (
         Yasuhiro Official Blog
       </Anchor>
     </li>
-    <li>
-      <Anchor to="/contact" className="menu menu-hover">
-        Contact
-      </Anchor>
-    </li>
   </>
 )
 
