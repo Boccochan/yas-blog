@@ -35,7 +35,9 @@
   "education-lang": "London Language School 2016 - 2017",
   "language": "Japanese (Native), English (fluent)",
   "location": "Tokyo, Japan",
-  "r-and-d": "Research and Development",
-  "r-and-d-description": "I believe that the most of software is developed on cloud which can scale on demand. It makes the development and releasing software faster than before. The waterfall model was not the best choice for cloud computing. So, we started to study DevOps and scrum, and we have introduced CI/CD, serverless and micro-service architecture. "
+  "r-and-d": "Profile",
+  "r-and-d-description": "Joined DevOps and Scrum team about 2 years ago, then started to research how to improve the productivity of the software development. Contributed building the team and introduced a lot of new technologies to make development faster. Catched up with new techonologies quickly. Passionate to create a new software.",
+  "skill-detail": "Skill Details",
+  "environment-detail": "Others"
 
 }

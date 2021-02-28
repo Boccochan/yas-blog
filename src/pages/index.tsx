@@ -31,10 +31,10 @@ const IndexPage = ({ data }: Props) => {
   return (
     <Layout isMain={true}>
       <SEO title="Yasuhiro Ito" />
-      <div className=" mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-10">
+      <div className=" mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
           <div className="col-span-1 h-full md:pr-4 mb-4">
-            <h1 className="text-xl md:text-2xl mb-10 font-bold">
+            <h1 className="text-xl md:text-2xl mb-4 font-bold">
               {t('author')}
             </h1>
             <h2 className="text-sm text-gray-700 mb-4">
@@ -44,7 +44,7 @@ const IndexPage = ({ data }: Props) => {
             <Share />
           </div>
           <div className="col-span-1 h-full">
-            <h1 className="text-xl md:text-2xl mb-4 font-bold">
+            <h1 className="text-xl md:text-2xl mb-0 font-bold">
               {t('skill-summary')}
             </h1>
             <div className="flex items-center justify-center">
@@ -54,7 +54,7 @@ const IndexPage = ({ data }: Props) => {
         </div>
       </div>
       <div className="bg-white">
-        <div className=" mx-auto max-w-6xl pt-12 pb-12 px-4 xs:w-full md:w-11/12 md:mb-10">
+        <div className=" mx-auto max-w-6xl pt-12 pb-12 px-4 xs:w-full md:w-11/12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
             <div className="col-span-1 h-full">
               <div className="hidden md:flex items-center justify-left">
@@ -62,13 +62,28 @@ const IndexPage = ({ data }: Props) => {
               </div>
             </div>
             <div className="col-span-1 h-full">
-              <h1 className="text-black text-xl md:text-2xl font-bold mb-8">
+              <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
                 {t('r-and-d')}
               </h1>
               <p className="text-black text-normal mb-2">
                 {t('r-and-d-description')}
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" mx-auto max-w-6xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
+          <div className="col-span-1 h-full md:pr-4 mb-4">
+            <h1 className="text-black text-xl md:text-2xl font-bold mb-8">
+              {t('skill-detail')}
+            </h1>
+          </div>
+          <div className="col-span-1 h-full">
+            <h1 className="text-black text-xl md:text-2xl font-bold mb-8">
+              {t('environment-detail')}
+            </h1>
           </div>
         </div>
       </div>
