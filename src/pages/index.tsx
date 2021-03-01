@@ -10,6 +10,7 @@ import Img, { FixedObject } from 'gatsby-image'
 import Programming from '@/components/Home/Programming'
 import HandsOn from '@/components/Home/HandsOn'
 import History from '@/components/Home/History'
+import Others from '@/components/Home/Others'
 
 interface Props extends PageRendererProps {
   data: Query
@@ -105,7 +106,7 @@ const IndexPage = ({ data }: Props) => {
             <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
               {t('others')}
             </h1>
-            {/* <HandsOn /> */}
+            <Others />
           </div>
         </div>
       </div>
