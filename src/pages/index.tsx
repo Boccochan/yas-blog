@@ -9,6 +9,7 @@ import { Query } from '@/types/graphql-types'
 import Img, { FixedObject } from 'gatsby-image'
 import Programming from '@/components/Home/Programming'
 import HandsOn from '@/components/Home/HandsOn'
+import History from '@/components/Home/History'
 
 interface Props extends PageRendererProps {
   data: Query
@@ -88,6 +89,23 @@ const IndexPage = ({ data }: Props) => {
               {t('environment-detail')}
             </h1>
             <HandsOn />
+          </div>
+        </div>
+      </div>
+
+      <div className=" mx-auto max-w-6xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
+          <div className="col-span-1 h-full md:pr-4 mb-4">
+            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+              {t('history')}
+            </h1>
+            <History />
+          </div>
+          <div className="col-span-1 h-full">
+            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+              {t('others')}
+            </h1>
+            {/* <HandsOn /> */}
           </div>
         </div>
       </div>

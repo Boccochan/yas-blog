@@ -26,9 +26,9 @@ const Programming = () => {
   ]
   return (
     <div>
-      {skills.map(({ lang, point }) => {
+      {skills.map(({ lang, point }, index) => {
         return (
-          <div className="flex mb-1 items-center">
+          <div className="flex mb-1 items-center" key={index}>
             <p className="mr-4 w-20">{lang}</p>
             {[...Array(5)].map((_, index) => {
               if (index < point) {

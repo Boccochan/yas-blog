@@ -24,8 +24,8 @@
   "debit-name": "deBit株式会社",
   "debit-skills": "Rust",
   "debit-terms": "9ヶ月",
-  "debit-env": "Linux、AWS、CircleCI",
-  "debit-description": "仮想通貨のトレードシステムのコア部分の開発",
+  "debit-env": "Linux、AWS、Docker、CircleCI",
+  "debit-description": "仮想通貨のトレードシステムのコア部分の開発を担当。",
   "qualitia-name": "株式会社クオリティア",
   "qualitia-skills": "Typescript、Python3",
   "qualitia-terms": "2年",
@@ -38,5 +38,9 @@
   "r-and-d": "技術者として",
   "r-and-d-description": "Webやシステムの主戦場がオンプレからクラウドへ移行したことにより、ソフトウェアのリリースサイクルが昔よりも格段に短くなっています。仕様検討、開発、リリース、フィードバック、改善のループをいかに素早く回すかがプロジェクトの成功にとって重要なカギになっています。そのような要求に耐えるべく、CI/CD、テスト自動化、マイクロサービスアーキティクチャ、サーバレスアーキティクチャを導入し、開発手法は小さな機能を細かくリリースできるようにDevOpsチームにてスクラムを実践し効率のよい開発手法の研究しております。",
   "skill-detail": "熟練度",
-  "environment-detail": "実践経験"
+  "environment-detail": "実践経験",
+  "history": "職歴",
+  "others": "その他",
+  "education": "学歴",
+  "lang": "言語"
 }
