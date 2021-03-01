@@ -47,7 +47,7 @@ const LangSelector = () => {
     <div className="relative inline-block text-left h-full">
       <div
         onClick={() => setOpen(!isOpen)}
-        className="flex item-center h-full cursor-pointer"
+        className="flex items-center h-full cursor-pointer"
       >
         <GrLanguage />
         <p className="hidden md:block ml-2 text-xs">{lang.selected}</p>
