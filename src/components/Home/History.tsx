@@ -19,7 +19,7 @@ const Company = ({
   years,
 }: CompanyProps) => {
   return (
-    <div className="mb-4">
+    <div className="mb-8">
       <div className="flex justify-between border-b-2 mb-2 items-end">
         <h1>{name}</h1>
         <p className="text-xs">{years}</p>
@@ -76,7 +76,7 @@ const History = () => {
   console.log(companies)
 
   return (
-    <div>
+    <div className="md:mr-12">
       {companies.map(({ name, terms, skills, env, description, years }) => {
         return (
           <Company
