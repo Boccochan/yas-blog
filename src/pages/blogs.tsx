@@ -51,7 +51,7 @@ export const pageQuery = graphql`
 
 const createSummary = (node: MarkdownRemark, descript: boolean = false) => {
   const { title, date, description } = node.frontmatter!
-  console.log(title)
+
   if (descript) {
     return {
       title: title as string,
@@ -96,6 +96,8 @@ const BlogPage = ({ data, pageContext }: Props) => {
 
   const summaries = getBlogs(edges, 0, edges.length, true)
   const latests = getBlogs(edges, 0, 4, false)
+
+  console.log(summaries)
 
   const maxCount = edges
     .filter(({ node }) => node.frontmatter!.feature !== true)

@@ -54,7 +54,7 @@ A program is a chunk of machine code. That is really important concept. Please d
 <h2 id="h-1">Fetching a machine code</h2>
 
 
-CPU fetches a machine code from DRAM memory. I do not explain about cache here for making things simple.
+CPU fetches a machine code from DRAM memory. I do not explanation about cache here for making things simple.
 
 
 ![image](./image-cpu.png)
