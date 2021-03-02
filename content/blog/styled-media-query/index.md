@@ -2,7 +2,8 @@
 title: Media query for React with typescript
 date: "2020-07-17T21:40:32.169Z"
 description: How to implement responsible design on React with typescript
-lang: "en"
+featuredImage: ./select.jpg
+lang: 'en'
 ---
 
 Media query is important to support responsible design.

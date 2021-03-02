@@ -51,6 +51,7 @@ export const pageQuery = graphql`
 
 const createSummary = (node: MarkdownRemark, descript: boolean = false) => {
   const { title, date, description } = node.frontmatter!
+  console.log(title)
   if (descript) {
     return {
       title: title as string,

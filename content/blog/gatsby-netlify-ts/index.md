@@ -2,6 +2,7 @@
 title: Deploy Gatsby with Typescript to Netlify
 date: "2020-07-10T21:40:32.169Z"
 description: How to deploy Gatsby with Typescript to Netlify
+featuredImage: ./netlify-login.jpg
 lang: "en"
 ---
 
