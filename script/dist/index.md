@@ -1,63 +1,115 @@
 ---
-title: How CPU executes software?
-date: "2021-03-02T21:11:41+09:00"
-description: It is very important concept for all programmers
-featuredImage: ./image-top.jpg
+title: Synchronous vs Asynchronous execution
+date: "2021-03-04T21:19:22+09:00"
+description: Asynchronous is not that very complicated.
+featuredImage: ./image-top.png
 ---
 
 
-If you just started to learn programming, you might wonder how comptures execute your program. I am going to explain how it works simply.
+Synchronous and asynchronous confuse begineers or even intermediate level of programmers. I am going to explain how different they are as simple as possible, also how you can create asynchronous system.
+
 
 
 <nav class="blog-nav">
 <div class="inner">
-<p>目次</p>
+<p>Index</p>
 <ol class='top-ol-1'>
 <li class='top-li-1'>
-<a href='#h-0'>Program</a>
+<a href='#h-0'>Synchronous execution is simple</a>
 </li>
 <li class='top-li-1'>
-<a href='#h-1'>Fetching</a>
+<a href='#h-1'>Asynchronous execution is like ordering something at Amazon.</a>
+<ol class='top-ol-2'>
+<li class='top-li-2'>
+<a href='#h-2'>When does software get a result?</a>
+</li>
+<li class='top-li-2'>
+<a href='#h-3'>No need results all the time</a>
+</li>
+</ol>
 </li>
 </ol>
 </div>
 </nav>
 
-<h2>著者紹介</h2>
+<h2>About author</h2>
 
-プログラミング歴15年の現役エンジニアです。現在は都内のIT企業でソフトウェアエンジニアとして勤務しています。
+Having 15 years professional experience and still working as a software engineer.
 
-<h2 id="h-0">Program</h2>
-
-
-A program consists of a chunk of tiny machine codes. Each code is very simple, but they are just chunk of numbers. It is difficult to understand for us. Fortunately, we do not need to learn those primitive codes. Compliter or interpreter handles them. You might have heard assembler language. The assembler is almost the same as machine language, but it is readable for us.
-
-Here is sample of those assembler code. 
-
-| code | parameters |explain |
-| ---- | ---- | ---- |
-| MOV | address | move data |
-| ADD | number, address | Add number |
-
-CPU has their own dialect of assembler language. Compilers or interpreters absorbs those dialects. So, you will never see those language as long as you write iphone or web application.
-
-Do you need to know assembler languages? No, but you must understand how CPU executes programming even if you are learning web programming. And you need to know about assembler language a little bit for understanding around CPU.
-
-A program is a chunk of machine code. That is the very very important concept. Please do not forget if you are programmer.
-
-<h2 id="h-1">Fetching</h2>
+<h2 id="h-0">Synchronous execution is simple</h2>
 
 
-CPU fetches a machine code from memory. The most of time the memory will be DRAM. I do not explain about cache here for making things simple.
+Synchronous execution is just executing a machine code in order. It is the same as how CPU runs a program. If you do not know how CPU works, please check the belowing article. The article is pretty short and easy to understand. No worries.
+
+CPU can run a code step by step. The problem of synchronous is if some code can not go to next for some reason, the program will be freazed. 
+
+For example, a web site is trying to get an image from their server, but the server does not send anything, the web site might freaze if the web site waits the response from the server.
+
+That is why we need asynchronous execution. Asynchronous does not wait the response. 
+
+<h2 id="h-1">Asynchronous execution is like ordering something at Amazon.</h2>
 
 
-![image](./image-cpu.jpg)
+Imagin, you ordered a book at Amazon. Do you need to wait until the book arrives? If you can not do anything except waiting a book, you might die because you can not eat food or sleep. As long as I know, people go out or do some different tasks after ordered a book, right? That is asynchronous execution.
+
+As I explained, CPU can run a code in order. So, if CPU does not need to wait the result of the executed code, CPU can do some different tasks during waiting.
+
+But, wait. How or when does software know the result? 
+
+It depends on a system or programming language. I mean that asynchronous is just idea or concept, so each system or programming language implements their own way.
+
+That is why asynchoronous execution confuses begineers I think. 
+
+Anyway, do not think too much yet. Asynchronous is just like Amazon or other EC site. CPU does not need to wait when a code is executed asynchronously.
+
+<h3 id="h-2">When does software get a result?</h3>
 
 
-The most important thing is that CPU can fetch one machine code at the same time. In addition, CPU can fetch a machine code in order, such as address 0x0000, 0x0002,  0x0004 and so on. This explanation is not accurate since 'if' statement can change the order. But I would like to make things simple for now. 
+When a processing is finished, it is ready to go. But a software does not know when it will finish. So, Javascript, for example, provides promise or callback function.
 
-You might think about multi-core CPU like Core i series. Those CPU can handle multiple code at the same time, but still each core executes one machine code at the same time.
+For example, if a software want to fetch data from a server, you might write like belowing.
 
-CPU read a machine code in order from DRAM. This is also very important to understand synchronous, asynchronous, thread and process.
+```
+axios.get('https://api.something.com')
+  .then((response) => {
+    console.log('Successed!!', response)
+  })
+  .catch((err) => {
+    console.log('Failed!!', err)
+  })
+```
+
+'then' block will be executed when all processing of a backend server is finished without error. 'then' block will be fired in the future, but the 'axios.get' does not block anything. So, the software can run progress bar or spinner during waiting. 'catch' block will be fired when API returns error.
+
+This is asynchronous execution in Javascript.
+
+Why do we need this kind of technique? Again, CPU can execute codes in order. If some codes block and CPU can not execute the next code, the software will freaze. Software need to release CPU.
+
+So, Javascript provides the way of releasing CPU. That is called asynchronous. A program can get result by 'then' or 'catch' block.
+
+<h3 id="h-3">No need results all the time</h3>
+
+
+Software does not need results in some cases. If a system has to complete a request no matter what, the system does not need to return error to client.
+
+See the belowing
+
+
+![image](./image-queue.png)
+
+
+Program AAA believes that requests in a queue will be executed and succeeded. So, Program AAA does not care the result. In this case, Program AAA sends requests asynchronously. But Program AAA does not check the result.
+
+The queue can not lose a request for sure. Program BBB must execute and complete the request no matter what. 
+
+Is it possible to implement that kind of system? No, it is not. But we can build similar systems. For example, AWS, Azure and GCP provides high robust and reliable queue systems. A robust and reliable queue is the one of the key components for micro service architecture.
+
+In some cases, programs does not need to wait the result of a processing. But, it is also asynchronous execution.
+
+
+
+
+
+
 
 

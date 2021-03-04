@@ -1,5 +1,5 @@
 ---
-title: How CPU executes software?
+title: How does CPU runs software?
 date: "2021-03-02T21:11:41+09:00"
 description: It is very important concept for all programmers
 featuredImage: ./image-top.jpg
@@ -42,39 +42,39 @@ Here is sample of those assembler code.
 
 | code | parameters |explain |
 | ---- | ---- | ---- |
-| MOV | address | move data |
+| MOV | address | Move data |
 | ADD | number, address | Add number |
 
 CPU has their own dialect of assembler language. Compilers or interpreters absorbs those dialects. So, you will never see those language as long as you write iphone or web application.
 
-Do you need to know assembler languages? No, you do not. But you must understand how CPU executes programming even if you are learning web programming. And you need to know about assembler language a little bit for understanding around CPU.
+Do you need to know assembler languages? No, you do not. But you must understand how CPU handles a program even if you are learning web programming. And you need to know about assembler language a little bit for understanding around CPU.
 
-A program is a chunk of machine code. That is the very very important concept. Please do not forget if you are programmer.
+A program is a chunk of machine code. That is really important concept. Please do not forget if you are programmer.
 
 <h2 id="h-1">Fetching a machine code</h2>
 
 
-CPU fetches a machine code from DRAM memory. I do not explain about cache here for making things simple.
+CPU fetches a machine code from DRAM memory. I do not explanation about cache here for making things simple.
 
 
 ![image](./image-cpu.png)
 
 
-The most important thing is that CPU can fetch one machine code at the same time. In addition, CPU can fetch a machine code in order, such as address 0x0000, 0x0002,  0x0004 and so on. This explanation is not accurate since 'if' statement or calling function can change the order. But I would like to make things simple for now. 
+The most important thing is that CPU can fetch one machine code at the same time. In addition, CPU can fetch a machine code in order, such as address 0x0000, 0x0002,  0x0004 and so on. This explanation is not accurate since 'if' statement or calling function can change the next address which should be fetched. But I want to skip the explation about program counter for making things simple. 
 
 You might think about multi-core CPU like Core i series. Those CPU can handle multiple code at the same time, but still each core executes one machine code at the same time.
 
-CPU read a machine code in order from DRAM. This is also very important to understand synchronous, asynchronous, thread and process.
+CPU read a machine code in order from DRAM. This is also very important to understand synchronous, asynchronous, thread and process. Please keep it mind.
 
 
 
 <h2 id="h-2">How to execute a code</h2>
 
-CPU executes a code and put a result on memory. If you are learning high-level programming language, it is not very import to understand how CPU execute them.
+CPU executes a code and put a result on a memory. If you are learning high-level programming language, it is not very import to understand how CPU execute them.
 
 That's because you CAN NOT control them anyway. 
 
-You need to remember that CPU fetch a code in order from memory. 
+You need to remember that fetching a code in order from a memory. 
 
 
 

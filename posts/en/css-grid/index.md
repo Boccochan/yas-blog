@@ -4,7 +4,6 @@ date: "2020-07-18T21:40:32.169Z"
 description: How to use grid layout
 featuredImage: ./grid.jpg
 lang: "en"
-feature: true
 ---
 
 Let's see how to do the grid layout.
