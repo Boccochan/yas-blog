@@ -1,5 +1,5 @@
 ---
-title: How CPU handles software?
+title: How does CPU runs software?
 date: "2021-03-02T21:11:41+09:00"
 description: It is very important concept for all programmers
 featuredImage: ./image-top.jpg
@@ -42,7 +42,7 @@ Here is sample of those assembler code.
 
 | code | parameters |explain |
 | ---- | ---- | ---- |
-| MOV | address | move data |
+| MOV | address | Move data |
 | ADD | number, address | Add number |
 
 CPU has their own dialect of assembler language. Compilers or interpreters absorbs those dialects. So, you will never see those language as long as you write iphone or web application.
