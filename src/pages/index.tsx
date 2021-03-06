@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SEO from '@/components/Seo'
 import Layout from '@/components/Layout'
 import { useTranslation } from 'react-i18next'
@@ -11,6 +11,7 @@ import Programming from '@/components/Home/Programming'
 import HandsOn from '@/components/Home/HandsOn'
 import History from '@/components/Home/History'
 import Others from '@/components/Home/Others'
+import axios from 'axios'
 
 interface Props extends PageRendererProps {
   data: Query
@@ -31,6 +32,13 @@ export const pageQuery = graphql`
 const IndexPage = ({ data }: Props) => {
   const [t] = useTranslation()
   const fixed = data.file!.childImageSharp!.fixed!
+
+  useEffect(() => {
+    axios
+      .get('https://api.yas-ito.com/like')
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err))
+  }, [])
 
   return (
     <Layout isMain={true}>
