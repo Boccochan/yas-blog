@@ -1,5 +1,5 @@
 ---
-title: How does CPU runs software?
+title: How does CPU run software?
 date: "2021-03-02T21:11:41+09:00"
 description: It is very important concept for all programmers
 featuredImage: ./image-top.jpg
