@@ -11,24 +11,6 @@ feature: true
 If you just started to learn programming, you might wonder how comptures execute your program. Your question is pretty fare, it seems magic or something. But, you need to understand basic concept if you want to be software engineer. It does not matter what kind of software engineer is. I am going to explain how it works simply. I assume that readers are learning high-level programming language, so I am not telling very details around CPU.
 
 
-<nav class="blog-nav">
-<div class="inner">
-<p>Index</p>
-<ol class='top-ol-1'>
-<li class='top-li-1'>
-<a href='#h-0'>Software is a chunk of tiny codes</a>
-</li>
-<li class='top-li-1'>
-<a href='#h-1'>Fetching a machine code</a>
-</li>
-<li class='top-li-1'>
-<a href='#h-2'>How to execute a code</a>
-</li>
-
-</ol>
-</div>
-</nav>
-
 <h2>About author</h2>
 
 Having 15 years professional experience and still working as a software engineer.
