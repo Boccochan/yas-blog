@@ -42,7 +42,7 @@ When a processing is finished, it is ready to go. But a software does not know w
 
 For example, if a software want to fetch data from a server, you might write like belowing.
 
-```
+```javascript
 axios.get('https://api.something.com')
   .then((response) => {
     console.log('Successed!!', response)
