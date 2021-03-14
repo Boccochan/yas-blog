@@ -7,7 +7,7 @@ import Bio from '@/components/Bio'
 import { useTranslation } from 'react-i18next'
 import { usePageContext } from '@/i18n/PageContext'
 import Img from 'gatsby-image'
-import '@/styles/blog.scss'
+// import '@/styles/blog.scss'
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -59,6 +59,29 @@ const getElements = () => {
   return els
 }
 
+const createClassName = (tag: string) => {
+  switch (tag) {
+    case 'H1':
+      return ''
+    case 'H2':
+      return 'text-gray-900 text-2xl font-bold mt-8 mb-2'
+    case 'H3':
+      return 'text-gray-900 text-xl font-bold mt-8 mb-2'
+    case 'H4':
+      return ''
+    case 'H5':
+      return ''
+    case 'H6':
+      return ''
+    case 'H7':
+      return ''
+    case 'P':
+      return 'text-gray-700 text-lg font-normal mb-5'
+    default:
+      return undefined
+  }
+}
+
 const Post = ({ data, pageContext }: Props) => {
   const [t] = useTranslation()
   const [els, setEls] = useState<HTMLElement[]>([])
@@ -99,6 +122,13 @@ const Post = ({ data, pageContext }: Props) => {
           // @ts-ignore 2339 because id exists
           node.id = `h-${i++}`
         }
+
+        const className = createClassName(node.nodeName)
+
+        if (className != null) {
+          // @ts-ignore 2339 because className exists
+          node.className = className
+        }
       })
     }
 
@@ -126,32 +156,46 @@ const Post = ({ data, pageContext }: Props) => {
   const url = location.href ? location.href : ''
 
   return (
-    <div>
+    <div className="bg-gray-100 ">
       <Header siteTitle={'Yasuhiro Ito'} />
       <SEO title="Blog" description={description} />
-      <div className="flex min-h-screen flex-grow mx-auto max-w-6xl">
-        <div className="hidden md:block h-full w-20">
-          <div className="sticky top-0">
-            <AiFillLike className="text-green-500" />
-            <FacebookShareButton url={url}>
-              <FaFacebookF className=" text-gray-600" />
+      <div className="flex min-h-screen flex-grow mx-auto max-w-6xl mt-4">
+        <div className="hidden md:block h-full w-20 py-10">
+          <div className="sticky top-0 pt-20 pr-8">
+            <div className="w-full flex justify-center items-center mb-8">
+              <AiFillLike className="text-gray-600 text-4xl" />
+            </div>
+
+            <FacebookShareButton
+              url={url}
+              className="w-full flex justify-center items-center mb-8"
+            >
+              <FaFacebookF className=" text-gray-600 text-lg" />
             </FacebookShareButton>
-            <TwitterShareButton url={url} title={title} className="ml-2">
-              <FaTwitter className=" text-gray-600" />
+            <TwitterShareButton
+              url={url}
+              title={title}
+              className="w-full flex justify-center items-center mb-8"
+            >
+              <FaTwitter className=" text-gray-600 text-lg" />
             </TwitterShareButton>
-            <LinkedinShareButton url={url} title={title} className="ml-2">
-              <FaLinkedinIn className="text-gray-600" />
+            <LinkedinShareButton
+              url={url}
+              title={title}
+              className="w-full flex justify-center items-center mb-8"
+            >
+              <FaLinkedinIn className="text-gray-600 text-lg" />
             </LinkedinShareButton>
           </div>
         </div>
-        <div className="h-full bg-white">
+        <div className="h-full bg-white p-8">
           <div
             className="blog"
             ref={(content) => (doc = content)}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-        <div className="hidden md:block h-full bg-gray-300 w-9/12">
+        <div className="hidden md:block h-full w-9/12">
           <BlogMenu els={els} focus={paragraph} />
         </div>
       </div>
