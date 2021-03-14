@@ -1,22 +1,16 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Query, SitePageContext } from '@/types/graphql-types'
 import { graphql, PageRendererProps } from 'gatsby'
-import Layout from '@/components/Layout'
 import SEO from '@/components/Seo'
 import Bio from '@/components/Bio'
 import { useTranslation } from 'react-i18next'
-import { usePageContext } from '@/i18n/PageContext'
+
 import Img from 'gatsby-image'
-// import '@/styles/blog.scss'
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  LinkedinShareButton,
-} from 'react-share'
 import Header from '@/components/Header'
 import BlogMenu from '@/components/Blog/Menu'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import { AiFillLike } from 'react-icons/ai'
+import SnsMobile from '@/components/Sns/Mobile'
+import SnsLaptop from '@/components/Sns/Laptop'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -64,7 +58,7 @@ const createClassName = (tag: string) => {
     case 'H1':
       return ''
     case 'H2':
-      return 'text-gray-900 text-3xl font-bold mt-8 mb-2'
+      return 'text-gray-900 text-xl md:text-3xl font-bold mt-8 mb-2'
     case 'H3':
       return 'text-gray-900 text-xl font-bold mt-8 mb-2'
     case 'H4':
@@ -163,67 +157,20 @@ const Post = ({ data, pageContext }: Props) => {
     <div className="bg-gray-100 ">
       <Header siteTitle={'Yasuhiro Ito'} />
       <SEO title="Blog" description={description} />
-      <div className="flex min-h-screen flex-grow mx-auto max-w-6xl mt-4">
+      <div className="flex min-h-screen flex-grow mx-auto md:max-w-6xl mt-4">
         <div className="hidden md:block h-full w-20 py-10">
           <div className="sticky top-0 pt-20 pr-8">
-            <div className="w-full flex justify-center items-center mb-8">
-              <div>
-                <AiFillLike className="text-gray-600 text-4xl" />
-                <p className="text-center text-xs text-gray-600">352</p>
-              </div>
-            </div>
-
-            <FacebookShareButton
-              url={url}
-              className="w-full flex justify-center items-center mb-8 focus:outline-none"
-            >
-              <FaFacebookF className=" text-gray-600 text-lg" />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={url}
-              title={title}
-              className="w-full flex justify-center items-center mb-8 focus:outline-none"
-            >
-              <FaTwitter className=" text-gray-600 text-lg" />
-            </TwitterShareButton>
-            <LinkedinShareButton
-              url={url}
-              title={title}
-              className="w-full flex justify-center items-center mb-8 focus:outline-none"
-            >
-              <FaLinkedinIn className="text-gray-600 text-lg" />
-            </LinkedinShareButton>
+            <SnsLaptop title={title} url={url} />
           </div>
         </div>
-        <div className="h-full bg-white p-8">
+        <div className="h-full bg-white w-full p-1 md:p-8">
           <p className="text-sm text-gray-500">
             {new Date(date).toLocaleString()}
           </p>
-          <h1 id="h-0" className="text-4xl mb-4 font-bold">
+          <h1 id="h-0" className="text-2xl md:text-4xl mb-4 font-bold">
             {title}
           </h1>
-          <div className="flex w-1/4 mb-4">
-            <FacebookShareButton
-              url={url}
-              className="w-full flex justify-start items-center focus:outline-none"
-            >
-              <FaFacebookF className=" text-gray-600 text-xl" />
-            </FacebookShareButton>
-            <TwitterShareButton
-              url={url}
-              title={title}
-              className="w-full flex justify-start items-center  focus:outline-none"
-            >
-              <FaTwitter className=" text-gray-600 text-xl" />
-            </TwitterShareButton>
-            <LinkedinShareButton
-              url={url}
-              title={title}
-              className="w-full flex justify-start items-center  focus:outline-none"
-            >
-              <FaLinkedinIn className="text-gray-600 text-xl" />
-            </LinkedinShareButton>
-          </div>
+          <SnsMobile title={title} url={url} />
           {fluid !== undefined && (
             <div className="mb-8">
               <Img fluid={fluid} alt="top-image" />
@@ -239,14 +186,15 @@ const Post = ({ data, pageContext }: Props) => {
             <p className="text-center text-xs text-gray-600">352</p>
           </div>
         </div>
-        <div className="hidden md:block h-full w-9/12 mx-4">
+        <div className="hidden md:block h-full w-4/12 mx-4">
           <div className="h-full sticky top-0">
             <Bio />
             <BlogMenu els={els} focus={paragraph} />
           </div>
         </div>
       </div>
-      <footer id="footer" className="flex-none bg-gray-300">
+
+      <footer id="footer" className="flex-none bg-gray-300 sticky top-0">
         <p className="p-2 text-center text-xs">
           Copyright © 2021 Yasuhiro Ito. All Rights Reserved.
         </p>
