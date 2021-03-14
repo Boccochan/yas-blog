@@ -1,22 +1,16 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Query, SitePageContext } from '@/types/graphql-types'
 import { graphql, PageRendererProps } from 'gatsby'
-import Layout from '@/components/Layout'
 import SEO from '@/components/Seo'
 import Bio from '@/components/Bio'
 import { useTranslation } from 'react-i18next'
-import { usePageContext } from '@/i18n/PageContext'
+
 import Img from 'gatsby-image'
-import '@/styles/blog.scss'
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  LinkedinShareButton,
-} from 'react-share'
 import Header from '@/components/Header'
 import BlogMenu from '@/components/Blog/Menu'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import { AiFillLike } from 'react-icons/ai'
+import SnsMobile from '@/components/Sns/Mobile'
+import SnsLaptop from '@/components/Sns/Laptop'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -59,14 +53,41 @@ const getElements = () => {
   return els
 }
 
+const createClassName = (tag: string) => {
+  switch (tag) {
+    case 'H1':
+      return ''
+    case 'H2':
+      return 'text-gray-900 text-xl md:text-3xl font-bold mt-8 mb-2'
+    case 'H3':
+      return 'text-gray-900 text-xl font-bold mt-8 mb-2'
+    case 'H4':
+      return ''
+    case 'H5':
+      return ''
+    case 'H6':
+      return ''
+    case 'H7':
+      return ''
+    case 'P':
+      return 'text-gray-700 text-sm md:text-lg font-normal mb-5'
+    default:
+      return undefined
+  }
+}
+
 const Post = ({ data, pageContext }: Props) => {
   const [t] = useTranslation()
   const [els, setEls] = useState<HTMLElement[]>([])
   const [footer, setFooter] = useState<HTMLElement | null>(null)
   const [paragraph, setParagraph] = useState(0)
 
-  const isBottom = (el) =>
-    Math.floor(el.getBoundingClientRect().bottom) <= window.innerHeight
+  const isBottom = (el) => {
+    if (el != null) {
+      return Math.floor(el.getBoundingClientRect().bottom) <= window.innerHeight
+    }
+    return false
+  }
 
   let doc: HTMLDivElement | null = null
 
@@ -87,17 +108,24 @@ const Post = ({ data, pageContext }: Props) => {
   }
 
   useEffect(() => {
-    if (els.length === 0) {
+    if (els.length <= 1) {
       setEls(getElements())
     }
 
     if (doc != null) {
       console.log(doc.childNodes)
-      let i = 0
+      let i = 1
       doc.childNodes.forEach((node) => {
         if (node.nodeName.startsWith('H')) {
           // @ts-ignore 2339 because id exists
           node.id = `h-${i++}`
+        }
+
+        const className = createClassName(node.nodeName)
+
+        if (className != null) {
+          // @ts-ignore 2339 because className exists
+          node.className = className
         }
       })
     }
@@ -126,77 +154,52 @@ const Post = ({ data, pageContext }: Props) => {
   const url = location.href ? location.href : ''
 
   return (
-    <div>
+    <div className="bg-gray-100 ">
       <Header siteTitle={'Yasuhiro Ito'} />
       <SEO title="Blog" description={description} />
-      <div className="flex min-h-screen flex-grow mx-auto max-w-6xl">
-        <div className="hidden md:block h-full w-20">
-          <div className="sticky top-0">
-            <AiFillLike className="text-green-500" />
-            <FacebookShareButton url={url}>
-              <FaFacebookF className=" text-gray-600" />
-            </FacebookShareButton>
-            <TwitterShareButton url={url} title={title} className="ml-2">
-              <FaTwitter className=" text-gray-600" />
-            </TwitterShareButton>
-            <LinkedinShareButton url={url} title={title} className="ml-2">
-              <FaLinkedinIn className="text-gray-600" />
-            </LinkedinShareButton>
+      <div className="flex min-h-screen flex-grow mx-auto md:max-w-6xl mt-4">
+        <div className="hidden md:block h-full w-20 py-10">
+          <div className="sticky top-0 pt-20 pr-8">
+            <SnsLaptop title={title} url={url} />
           </div>
         </div>
-        <div className="h-full bg-white">
+        <div className="h-full bg-white w-full p-1 md:p-8">
+          <p className="text-sm text-gray-500">
+            {new Date(date).toLocaleString()}
+          </p>
+          <h1 id="h-0" className="text-2xl md:text-4xl mb-4 font-bold">
+            {title}
+          </h1>
+          <SnsMobile title={title} url={url} />
+          {fluid !== undefined && (
+            <div className="mb-8">
+              <Img fluid={fluid} alt="top-image" />
+            </div>
+          )}
           <div
             className="blog"
             ref={(content) => (doc = content)}
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <div className="w-full flex justify-start items-center ">
+            <AiFillLike className="text-gray-600 text-2xl mr-2" />
+            <p className="text-center text-xs text-gray-600">352</p>
+          </div>
         </div>
-        <div className="hidden md:block h-full bg-gray-300 w-9/12">
-          <BlogMenu els={els} focus={paragraph} />
+        <div className="hidden md:block h-full w-4/12 mx-4">
+          <div className="h-full sticky top-0">
+            <Bio />
+            <BlogMenu els={els} focus={paragraph} />
+          </div>
         </div>
       </div>
-      <footer id="footer" className="flex-none bg-gray-300">
+
+      <footer id="footer" className="flex-none bg-gray-300 sticky top-0">
         <p className="p-2 text-center text-xs">
           Copyright © 2021 Yasuhiro Ito. All Rights Reserved.
         </p>
       </footer>
     </div>
-    // <Layout>
-    //   <SEO title="Blog" description={description} />
-    //   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-full">
-    //     <div className="col-span-2 h-full bg-white p-1 md:p-8">
-    //       <p className="text-sm text-gray-500">
-    //         {new Date(date).toLocaleString()}
-    //       </p>
-    //       <h1 className="text-3xl my-4">{title}</h1>
-    //       <div className="py-4 border-t border-gray-200 border-solid">
-    //         <FacebookShareButton url={url}>
-    //           <FacebookIcon size={32} />
-    //         </FacebookShareButton>
-    //         <TwitterShareButton url={url} title={title} className="ml-2">
-    //           <TwitterIcon size={32} />
-    //         </TwitterShareButton>
-    //         <LinkedinShareButton url={url} title={title} className="ml-2">
-    //           <LinkedinIcon size={32} />
-    //         </LinkedinShareButton>
-    //       </div>
-    //       {fluid !== undefined && (
-    //         <div className="mb-8">
-    //           <Img fluid={fluid} alt="top-image" />
-    //         </div>
-    //       )}
-
-    //       <div
-    //         className="blog"
-    //         ref={htmlRef}
-    //         dangerouslySetInnerHTML={{ __html: html }}
-    //       />
-    //     </div>
-    //     <div className="col-span-2 h-full md:col-span-1">
-    //       <Bio />
-    //     </div>
-    //   </div>
-    // </Layout>
   )
 }
 
