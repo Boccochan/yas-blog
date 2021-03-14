@@ -11,35 +11,11 @@ feature: true
 Synchronous and asynchronous confuse begineers or even intermediate level of programmers. I am going to explain how different they are as simple as possible, also how you can create asynchronous system.
 
 
-
-<nav class="blog-nav">
-<div class="inner">
-<p>Index</p>
-<ol class='top-ol-1'>
-<li class='top-li-1'>
-<a href='#h-0'>Synchronous execution is simple</a>
-</li>
-<li class='top-li-1'>
-<a href='#h-1'>Asynchronous execution is like Amazon</a>
-<ol class='top-ol-2'>
-<li class='top-li-2'>
-<a href='#h-2'>When does software get a result?</a>
-</li>
-<li class='top-li-2'>
-<a href='#h-3'>No need results all the time</a>
-</li>
-</ol>
-</li>
-</ol>
-</div>
-</nav>
-
-<h2>About author</h2>
+## About author
 
 Having 15 years professional experience and still working as a software engineer.
 
-<h2 id="h-0">Synchronous execution is simple</h2>
-
+## Synchronous execution is simple
 
 Synchronous execution is just executing a machine code in order. It is the same as how CPU runs a program. If you do not know how CPU works, please check [this article](/en/blogs/how-cpu-execute-program). The article is pretty short and easy to understand. No worries.
 
@@ -49,7 +25,8 @@ For example, a web site is trying to get an image from their server, but the ser
 
 That is why we need asynchronous execution. Asynchronous does not wait the response. 
 
-<h2 id="h-1">Asynchronous execution is like Amazon</h2>
+
+## Asynchronous execution is like Amazon
 
 
 Imagin, you ordered a book at Amazon. Do you need to wait until the book arrives? If you can not do anything except waiting a book, you might die because you can not eat food or sleep. As long as I know, people go out or do some different tasks after ordered a book, right? That is asynchronous execution.
@@ -64,8 +41,7 @@ That is why asynchoronous execution confuses begineers I think.
 
 Anyway, do not think too much yet. Asynchronous is just like Amazon or other EC site. CPU does not need to wait when a code is executed asynchronously.
 
-<h3 id="h-2">When does software get a result?</h3>
-
+### When does software get a result?
 
 When a processing is finished, it is ready to go. But a software does not know when it will finish. So, Javascript, for example, provides promise or callback function.
 
@@ -89,8 +65,7 @@ Why do we need this kind of technique? Again, CPU can execute codes in order. If
 
 So, Javascript provides the way of releasing CPU. That is called asynchronous. A program can get result by 'then' or 'catch' block.
 
-<h3 id="h-3">No need results all the time</h3>
-
+### No need results all the time
 
 Software does not need results in some cases. If a system has to complete a request no matter what, the system does not need to return error to client.
 
