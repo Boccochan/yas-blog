@@ -188,6 +188,7 @@ const Post = ({ data, pageContext }: Props) => {
         </div>
         <div className="hidden md:block h-full w-4/12 mx-4">
           <div className="h-full sticky top-0">
+            <p className="text-xl mb-3 text-gray-600">{t('about-author')}</p>
             <Bio />
             <BlogMenu els={els} focus={paragraph} />
           </div>
