@@ -1,4 +1,7 @@
 module.exports = {
+  experimental: {
+    applyComplexClasses: true,
+  },
   theme: {
     screens: {
       xs: '280px',

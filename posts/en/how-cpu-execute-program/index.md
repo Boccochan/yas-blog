@@ -11,11 +11,8 @@ feature: true
 If you just started to learn programming, you might wonder how comptures execute your program. Your question is pretty fare, it seems magic or something. But, you need to understand basic concept if you want to be software engineer. It does not matter what kind of software engineer is. I am going to explain how it works simply. I assume that readers are learning high-level programming language, so I am not telling very details around CPU.
 
 
-<h2>About author</h2>
 
-Having 15 years professional experience and still working as a software engineer.
-
-<h2 id="h-0">Software is a chunk of tiny codes</h2>
+## Software is a chunk of tiny codes
 
 
 Software consists of a chunk of tiny machine codes. Each code is very simple, but it is difficult to read for human. Fortunately, we do not need to learn those primitive codes. Compilers or interpreters handle them. You might have heard assembler language. Assembler language is almost equal to machine language, but it is readable for us.
@@ -33,7 +30,7 @@ Do you need to know assembler languages? No, you do not. But you must understand
 
 A program is a chunk of machine code. That is really important concept. Please do not forget if you are programmer.
 
-<h2 id="h-1">Fetching a machine code</h2>
+## Fetching a machine code
 
 
 CPU fetches a machine code from DRAM memory. I do not explanation about cache here for making things simple.
@@ -50,7 +47,7 @@ CPU read a machine code in order from DRAM. This is also very important to under
 
 
 
-<h2 id="h-2">How to execute a code</h2>
+## How to execute a code
 
 CPU executes a code and put a result on a memory. If you are learning high-level programming language, it is not very import to understand how CPU execute them.
 

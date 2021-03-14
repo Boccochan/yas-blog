@@ -75,11 +75,7 @@ export const createPages: GatsbyCreatePages = async ({
       post.node.frontmatter.lang === undefined
         ? 'ja'
         : post.node.frontmatter.lang
-    // const splitted = post.node.fields.slug.split('/')
-    // const lang = splitted[1]
-    // const slug = splitted[2]
 
-    console.log(33333, post.node.fields.slug)
     createPage({
       path: `/${lang}/blogs${post.node.fields.slug}`,
       // tslint:disable-next-line:object-literal-sort-keys

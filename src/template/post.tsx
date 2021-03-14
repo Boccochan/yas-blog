@@ -11,6 +11,7 @@ import BlogMenu from '@/components/Blog/Menu'
 import { AiFillLike } from 'react-icons/ai'
 import SnsMobile from '@/components/Sns/Mobile'
 import SnsLaptop from '@/components/Sns/Laptop'
+import '@/styles/blog.scss'
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
@@ -51,29 +52,6 @@ const getElements = () => {
   }
 
   return els
-}
-
-const createClassName = (tag: string) => {
-  switch (tag) {
-    case 'H1':
-      return ''
-    case 'H2':
-      return 'text-gray-900 text-xl md:text-3xl font-bold mt-8 mb-2'
-    case 'H3':
-      return 'text-gray-900 text-xl font-bold mt-8 mb-2'
-    case 'H4':
-      return ''
-    case 'H5':
-      return ''
-    case 'H6':
-      return ''
-    case 'H7':
-      return ''
-    case 'P':
-      return 'text-gray-700 text-sm md:text-lg font-normal mb-5'
-    default:
-      return undefined
-  }
 }
 
 const Post = ({ data, pageContext }: Props) => {
@@ -119,13 +97,6 @@ const Post = ({ data, pageContext }: Props) => {
         if (node.nodeName.startsWith('H')) {
           // @ts-ignore 2339 because id exists
           node.id = `h-${i++}`
-        }
-
-        const className = createClassName(node.nodeName)
-
-        if (className != null) {
-          // @ts-ignore 2339 because className exists
-          node.className = className
         }
       })
     }
@@ -188,6 +159,7 @@ const Post = ({ data, pageContext }: Props) => {
         </div>
         <div className="hidden md:block h-full w-4/12 mx-4">
           <div className="h-full sticky top-0">
+            <p className="text-xl mb-3 text-gray-600">{t('about-author')}</p>
             <Bio />
             <BlogMenu els={els} focus={paragraph} />
           </div>
