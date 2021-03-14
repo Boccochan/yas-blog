@@ -64,7 +64,7 @@ const createClassName = (tag: string) => {
     case 'H1':
       return ''
     case 'H2':
-      return 'text-gray-900 text-2xl font-bold mt-8 mb-2'
+      return 'text-gray-900 text-3xl font-bold mt-8 mb-2'
     case 'H3':
       return 'text-gray-900 text-xl font-bold mt-8 mb-2'
     case 'H4':
@@ -88,8 +88,12 @@ const Post = ({ data, pageContext }: Props) => {
   const [footer, setFooter] = useState<HTMLElement | null>(null)
   const [paragraph, setParagraph] = useState(0)
 
-  const isBottom = (el) =>
-    Math.floor(el.getBoundingClientRect().bottom) <= window.innerHeight
+  const isBottom = (el) => {
+    if (el != null) {
+      return Math.floor(el.getBoundingClientRect().bottom) <= window.innerHeight
+    }
+    return false
+  }
 
   let doc: HTMLDivElement | null = null
 
@@ -110,13 +114,13 @@ const Post = ({ data, pageContext }: Props) => {
   }
 
   useEffect(() => {
-    if (els.length === 0) {
+    if (els.length <= 1) {
       setEls(getElements())
     }
 
     if (doc != null) {
       console.log(doc.childNodes)
-      let i = 0
+      let i = 1
       doc.childNodes.forEach((node) => {
         if (node.nodeName.startsWith('H')) {
           // @ts-ignore 2339 because id exists
@@ -163,40 +167,83 @@ const Post = ({ data, pageContext }: Props) => {
         <div className="hidden md:block h-full w-20 py-10">
           <div className="sticky top-0 pt-20 pr-8">
             <div className="w-full flex justify-center items-center mb-8">
-              <AiFillLike className="text-gray-600 text-4xl" />
+              <div>
+                <AiFillLike className="text-gray-600 text-4xl" />
+                <p className="text-center text-xs text-gray-600">352</p>
+              </div>
             </div>
 
             <FacebookShareButton
               url={url}
-              className="w-full flex justify-center items-center mb-8"
+              className="w-full flex justify-center items-center mb-8 focus:outline-none"
             >
               <FaFacebookF className=" text-gray-600 text-lg" />
             </FacebookShareButton>
             <TwitterShareButton
               url={url}
               title={title}
-              className="w-full flex justify-center items-center mb-8"
+              className="w-full flex justify-center items-center mb-8 focus:outline-none"
             >
               <FaTwitter className=" text-gray-600 text-lg" />
             </TwitterShareButton>
             <LinkedinShareButton
               url={url}
               title={title}
-              className="w-full flex justify-center items-center mb-8"
+              className="w-full flex justify-center items-center mb-8 focus:outline-none"
             >
               <FaLinkedinIn className="text-gray-600 text-lg" />
             </LinkedinShareButton>
           </div>
         </div>
         <div className="h-full bg-white p-8">
+          <p className="text-sm text-gray-500">
+            {new Date(date).toLocaleString()}
+          </p>
+          <h1 id="h-0" className="text-4xl mb-4 font-bold">
+            {title}
+          </h1>
+          <div className="flex w-1/4 mb-4">
+            <FacebookShareButton
+              url={url}
+              className="w-full flex justify-start items-center focus:outline-none"
+            >
+              <FaFacebookF className=" text-gray-600 text-xl" />
+            </FacebookShareButton>
+            <TwitterShareButton
+              url={url}
+              title={title}
+              className="w-full flex justify-start items-center  focus:outline-none"
+            >
+              <FaTwitter className=" text-gray-600 text-xl" />
+            </TwitterShareButton>
+            <LinkedinShareButton
+              url={url}
+              title={title}
+              className="w-full flex justify-start items-center  focus:outline-none"
+            >
+              <FaLinkedinIn className="text-gray-600 text-xl" />
+            </LinkedinShareButton>
+          </div>
+          {fluid !== undefined && (
+            <div className="mb-8">
+              <Img fluid={fluid} alt="top-image" />
+            </div>
+          )}
           <div
             className="blog"
             ref={(content) => (doc = content)}
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <div className="w-full flex justify-start items-center ">
+            <AiFillLike className="text-gray-600 text-2xl mr-2" />
+            <p className="text-center text-xs text-gray-600">352</p>
+          </div>
         </div>
-        <div className="hidden md:block h-full w-9/12">
-          <BlogMenu els={els} focus={paragraph} />
+        <div className="hidden md:block h-full w-9/12 mx-4">
+          <div className="h-full sticky top-0">
+            <Bio />
+            <BlogMenu els={els} focus={paragraph} />
+          </div>
         </div>
       </div>
       <footer id="footer" className="flex-none bg-gray-300">
@@ -205,42 +252,6 @@ const Post = ({ data, pageContext }: Props) => {
         </p>
       </footer>
     </div>
-    // <Layout>
-    //   <SEO title="Blog" description={description} />
-    //   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-full">
-    //     <div className="col-span-2 h-full bg-white p-1 md:p-8">
-    //       <p className="text-sm text-gray-500">
-    //         {new Date(date).toLocaleString()}
-    //       </p>
-    //       <h1 className="text-3xl my-4">{title}</h1>
-    //       <div className="py-4 border-t border-gray-200 border-solid">
-    //         <FacebookShareButton url={url}>
-    //           <FacebookIcon size={32} />
-    //         </FacebookShareButton>
-    //         <TwitterShareButton url={url} title={title} className="ml-2">
-    //           <TwitterIcon size={32} />
-    //         </TwitterShareButton>
-    //         <LinkedinShareButton url={url} title={title} className="ml-2">
-    //           <LinkedinIcon size={32} />
-    //         </LinkedinShareButton>
-    //       </div>
-    //       {fluid !== undefined && (
-    //         <div className="mb-8">
-    //           <Img fluid={fluid} alt="top-image" />
-    //         </div>
-    //       )}
-
-    //       <div
-    //         className="blog"
-    //         ref={htmlRef}
-    //         dangerouslySetInnerHTML={{ __html: html }}
-    //       />
-    //     </div>
-    //     <div className="col-span-2 h-full md:col-span-1">
-    //       <Bio />
-    //     </div>
-    //   </div>
-    // </Layout>
   )
 }
 

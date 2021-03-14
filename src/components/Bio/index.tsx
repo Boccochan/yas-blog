@@ -63,7 +63,11 @@ const meStyle = {
   borderRadius: '50%',
 }
 
-const Bio = () => {
+interface Props {
+  showSummary?: boolean
+}
+
+const Bio = ({ showSummary }: Props) => {
   const data = useStaticQuery(query)
   const [t] = useTranslation()
   const me = data.file.childImageSharp.fixed
@@ -73,7 +77,7 @@ const Bio = () => {
       <Img fixed={me} alt="author-image" style={meStyle} />
       <div className="mb-6">
         <h3 className="my-4 font-bold">{t('author')}</h3>
-        <p className="text-gray-700">{t('summary')}</p>
+        {showSummary && <p className="text-gray-700">{t('summary')}</p>}
       </div>
       <div className="mb-6">
         <Share />

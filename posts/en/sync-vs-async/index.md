@@ -10,11 +10,6 @@ feature: true
 
 Synchronous and asynchronous confuse begineers or even intermediate level of programmers. I am going to explain how different they are as simple as possible, also how you can create asynchronous system.
 
-
-## About author
-
-Having 15 years professional experience and still working as a software engineer.
-
 ## Synchronous execution is simple
 
 Synchronous execution is just executing a machine code in order. It is the same as how CPU runs a program. If you do not know how CPU works, please check [this article](/en/blogs/how-cpu-execute-program). The article is pretty short and easy to understand. No worries.
