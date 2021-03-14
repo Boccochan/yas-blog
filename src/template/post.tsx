@@ -70,7 +70,7 @@ const createClassName = (tag: string) => {
     case 'H7':
       return ''
     case 'P':
-      return 'text-gray-700 text-lg font-normal mb-5'
+      return 'text-gray-700 text-sm md:text-lg font-normal mb-5'
     default:
       return undefined
   }
