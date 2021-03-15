@@ -1,6 +1,6 @@
 .blog {
   p {
-    @apply text-gray-700 text-sm font-normal mb-5;
+    @apply text-gray-800 text-sm font-normal mb-5;
   }
   h2 {
     @apply text-gray-900 text-xl font-bold mt-8 mb-2
@@ -16,7 +16,7 @@
     @apply bg-gray-100
   }
   th {
-    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-100 bg-gray-900 uppercase tracking-wider
   }
   tbody {
     @apply bg-white divide-y divide-gray-200
@@ -24,12 +24,20 @@
   td {
     @apply px-6 py-4 
   }
+
+  ul{
+    @apply mb-4 ml-4 list-disc
+  } 
+
+  li {
+    @apply ml-1 text-base font-normal text-gray-700
+  }
 }
 
 @screen md {
   .blog {
     p {
-      @apply text-lg
+      @apply text-base
     }
     h2 {
       @apply text-3xl

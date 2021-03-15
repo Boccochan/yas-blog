@@ -19,17 +19,17 @@ const Company = ({
   years,
 }: CompanyProps) => {
   return (
-    <div className="mb-8">
+    <div className="mb-8 text-gray-800">
       <div className="flex justify-between border-b-2 mb-2 items-end">
-        <h1>{name}</h1>
-        <p className="text-xs">{years}</p>
+        <h1 className="font-bold">{name}</h1>
+        <p className="text-xs text-gray-700">{years}</p>
       </div>
 
       <p className="text-xs mb-1">
         {skills} / {env}
       </p>
 
-      <p className="text-sm">{description}</p>
+      <p className="text-normal">{description}</p>
     </div>
   )
 }

@@ -18,7 +18,7 @@ const Laptop = ({ title, url }: Props) => {
       <div className="w-full flex justify-center items-center mb-8">
         <div>
           <AiFillLike className="text-gray-600 text-4xl" />
-          <p className="text-center text-xs text-gray-600">352</p>
+          <p className="text-center text-xs text-gray-900">352</p>
         </div>
       </div>
 

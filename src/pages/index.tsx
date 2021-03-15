@@ -38,17 +38,19 @@ const IndexPage = ({ data }: Props) => {
       <div className=" mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
           <div className="col-span-1 h-full md:pr-4 mb-4">
-            <h1 className="text-xl md:text-2xl mb-4 font-bold">
+            <h1 className="text-gray-900 text-4xl md:text-6xl mb-4 font-bold">
               {t('author')}
             </h1>
-            <h2 className="text-sm text-gray-700 mb-4">
+            <h2 className="text-sm text-gray-800 mb-4">
               {t('title')} / {t('location')}
             </h2>
-            <p className="text-normal mb-12">{t('self-summary')}</p>
+            <p className="text-normal text-gray-800 mb-12">
+              {t('self-summary')}
+            </p>
             <Share />
           </div>
           <div className="col-span-1 h-full">
-            <h1 className="text-xl md:text-2xl mb-0 font-bold">
+            <h1 className="text-gray-900 text-xl md:text-2xl mb-0 font-bold">
               {t('skill-summary')}
             </h1>
             <div className="flex items-center justify-center">
@@ -66,10 +68,10 @@ const IndexPage = ({ data }: Props) => {
               </div>
             </div>
             <div className="col-span-1 h-full">
-              <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+              <h1 className="text-gray-900 text-xl md:text-2xl font-bold mb-4">
                 {t('r-and-d')}
               </h1>
-              <p className="text-black text-normal mb-2">
+              <p className="text-normal text-gray-800 mb-2">
                 {t('r-and-d-description')}
               </p>
             </div>
@@ -80,13 +82,13 @@ const IndexPage = ({ data }: Props) => {
       <div className=" mx-auto max-w-6xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
           <div className="col-span-1 h-full md:pr-4 mb-4">
-            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+            <h1 className="text-gray-900 text-xl md:text-2xl font-bold mb-4">
               {t('skill-detail')}
             </h1>
             <Programming />
           </div>
           <div className="col-span-1 h-full">
-            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+            <h1 className="text-gray-900 text-xl md:text-2xl font-bold mb-4">
               {t('environment-detail')}
             </h1>
             <HandsOn />
@@ -97,13 +99,13 @@ const IndexPage = ({ data }: Props) => {
       <div className=" mx-auto max-w-6xl pt-8 px-4 pb-6 xs:w-full md:w-11/12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-4">
           <div className="col-span-1 h-full md:pr-4 mb-4">
-            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+            <h1 className="text-gray-900 text-xl md:text-2xl font-bold mb-4">
               {t('history')}
             </h1>
             <History />
           </div>
           <div className="col-span-1 h-full">
-            <h1 className="text-black text-xl md:text-2xl font-bold mb-4">
+            <h1 className="text-gray-900 text-xl md:text-2xl font-bold mb-4">
               {t('others')}
             </h1>
             <Others />

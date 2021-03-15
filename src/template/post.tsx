@@ -91,7 +91,6 @@ const Post = ({ data, pageContext }: Props) => {
     }
 
     if (doc != null) {
-      console.log(doc.childNodes)
       let i = 1
       doc.childNodes.forEach((node) => {
         if (node.nodeName.startsWith('H')) {
@@ -135,7 +134,7 @@ const Post = ({ data, pageContext }: Props) => {
           </div>
         </div>
         <div className="h-full bg-white w-full p-1 md:p-8">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-800">
             {new Date(date).toLocaleString()}
           </p>
           <h1 id="h-0" className="text-2xl md:text-4xl mb-4 font-bold">
@@ -154,7 +153,7 @@ const Post = ({ data, pageContext }: Props) => {
           />
           <div className="w-full flex justify-start items-center ">
             <AiFillLike className="text-gray-600 text-2xl mr-2" />
-            <p className="text-center text-xs text-gray-600">352</p>
+            <p className="text-center text-xs text-gray-900">352</p>
           </div>
         </div>
         <div className="hidden md:block h-full w-4/12 mx-4">

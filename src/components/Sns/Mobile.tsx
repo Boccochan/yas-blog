@@ -13,26 +13,26 @@ interface Props {
 
 const Mobile = ({ title, url }: Props) => {
   return (
-    <div className="flex w-1/4 mb-4 md:hidden">
+    <div className="flex mb-4 md:hidden">
       <FacebookShareButton
         url={url}
-        className="w-full flex justify-start items-center focus:outline-none"
+        className="flex justify-start items-center mr-10 focus:outline-none"
       >
-        <FaFacebookF className=" text-gray-600 text-xl" />
+        <FaFacebookF className=" text-gray-600 text-3xl" />
       </FacebookShareButton>
       <TwitterShareButton
         url={url}
         title={title}
-        className="w-full flex justify-start items-center  focus:outline-none"
+        className="flex justify-start items-center mr-10 focus:outline-none"
       >
-        <FaTwitter className=" text-gray-600 text-xl" />
+        <FaTwitter className=" text-gray-600 text-3xl" />
       </TwitterShareButton>
       <LinkedinShareButton
         url={url}
         title={title}
-        className="w-full flex justify-start items-center  focus:outline-none"
+        className="flex justify-start items-center mr-10 focus:outline-none"
       >
-        <FaLinkedinIn className="text-gray-600 text-xl" />
+        <FaLinkedinIn className="text-gray-600 text-3xl" />
       </LinkedinShareButton>
     </div>
   )
