@@ -94,59 +94,49 @@ DevOpsを実践しながら、毎日戦っています。
 
 Linuxだったので、無限にインストールしても無料、稟議もいらない、しかも品質も担保できる、という仕組みを作り上げました。貢献したことは以下です。
 
+- テストの費用を億単位で削減。
+- 製品の品質向上による社会的信用の向上
+- 営業のセールストークとして使用
+- 海外の協力会社へテストツールを提供し、技術的連携の強化
+- QAが機能していなくても品質向上
 
-<p><strong>貢献したこと</strong></p>
-<ul class='cp_list'>
-  <li>テストの費用を億単位で削減。</li>
-  <li>製品の品質向上による社会的信用の向上</li>
-  <li>営業のセールストークとして使用</li>
-  <li>海外の協力会社へテストツールを提供し、技術的連携の強化</li>
-  <li>QAが機能していなくても品質向上</li>
-</ul>
 
-<p class="mt-8 mb-8">
 <strong>社会的信用の向上</strong>はかなり重要で、以前、私が勤めていた会社の製品が市場で不具合を爆発させたことがあり、信用を失っていました。それを回復するというのは大きな使命であったと思います。
-</p>
 
-<p class="mt-8 mb-8">
+
+
 私の給料なんて、これらの利益に比べたら軽いものではないでしょうか。企業からしたら、安くてリターンのよい投資だったと思います。
-</p>
 
-<p class="mt-8 mb-8">
+
+
 実際はそこまでテストにお金かけられない、と考えている人たちもいるでしょうし、システムによっては確かにテスト自動化するのが難しいものもあると思います。
-</p>
 
-<p class="mt-8 mb-8">
+
+
 しかし、部分的でもよいのでテストを自動化できるところがないか、そして、それを考える人を専属で一人割り当てても、お釣りがくるかもしれませんよ！
-</p>
 
 
-<h2 id="test-engineer">ソフトウェアテストエンジニアに会ったことがない</h2>
+## ソフトウェアテストエンジニアに会ったことがない
 
-<p class="mt-8 mb-8">
+
 これはもしかしたら日本企業の特徴かもしれませんが、私はソフトウェアテストエンジニアと呼べる人にまだ会ったことがないです。おそらく、一番それに近いことをしたことがあるのは私かもしれません。
-</p>
 
-<p class="mt-8 mb-8">
+
+
 以下はIndeedで"Software Test Engineer"で場所をカリフォルニアで検索した際の募集要項にあったものを一部掲載します。ちなみに、<strong>要求が軽いやつ</strong>を選びました。
-</p>
 
-<p><strong>Role & Responsibilities</strong></p>
-<ul class='cp_list'>
-  <li>Review Customer Solution Requirement Docs (SRDs)</li>
-  <li>Design and Validate Customer use cases</li>
-  <li>Automate use cases using Pythons</li>
-  <li>Participate in innovative Software test initiatives</li>
-  <li>Work closely with the field to successfully enable the Solutions</li>
-</ul>
+- Review Customer Solution Requirement Docs (SRDs)
+- Design and Validate Customer use cases
+- Automate use cases using Pythons
+- Automate use cases using Pythons
+- Participate in innovative Software test initiatives
+- Work closely with the field to successfully enable the Solutions
 
-<p class="mt-8 mb-8">
+
 Automate use cases using Pythonsという所ですが、Pythonでテストケース自動化してね。という意味です。要するに、テストケース考えるのは当たり前で、テストケースを自動化するところまでがあなたの仕事ですよ、という意味です。
-</p>
 
-<p class="mt-8 mb-8">
 面白いのでもう一つ例をあげましょう。こちらは少々重いヤツです。
-</p>
+
 
 <p><strong>Role & Responsibilities</strong></p>
 <ul class='cp_list'>
