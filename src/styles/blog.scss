@@ -1,6 +1,6 @@
 .blog {
   p {
-    @apply text-gray-900 text-sm font-normal mb-5;
+    @apply text-gray-800 text-sm font-normal mb-5;
   }
   h2 {
     @apply text-gray-900 text-xl font-bold mt-8 mb-2
@@ -37,7 +37,7 @@
 @screen md {
   .blog {
     p {
-      @apply text-lg
+      @apply text-base
     }
     h2 {
       @apply text-3xl
