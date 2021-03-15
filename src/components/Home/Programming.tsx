@@ -29,7 +29,7 @@ const Programming = () => {
       {skills.map(({ lang, point }, index) => {
         return (
           <div className="flex mb-1 items-center" key={index}>
-            <p className="mr-4 w-20">{lang}</p>
+            <p className="mr-4 w-20 text-gray-800 ">{lang}</p>
             {[...Array(5)].map((_, index) => {
               if (index < point) {
                 return <BsStarFill color="#24C7BC" className="mr-4" />

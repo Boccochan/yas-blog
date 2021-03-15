@@ -2,7 +2,7 @@ import React from 'react'
 
 const HandsOn = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-800 text-normal">
       <div className="mb-2">
         <p>Nuxt/Vuejs</p>
         <p>Gatsby/React</p>
