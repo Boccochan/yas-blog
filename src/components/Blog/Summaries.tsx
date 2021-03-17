@@ -3,8 +3,6 @@ import { FluidObject } from 'gatsby-image'
 import Img from 'gatsby-image'
 import Link from '@/components/Link'
 
-import '@/styles/main.css'
-
 export interface SummaryProps {
   title: string
   date: string
@@ -26,7 +24,7 @@ interface Props {
 const Summaries = ({ summaries, styles }: Props) => {
   const { frame, inner, title: tlStyle, description: ds } = styles
   const fr = `${frame} cursor-pointer`
-  const tl = `${tlStyle} inline-block menu-hover`
+  const tl = `${tlStyle}`
   return (
     <>
       {summaries.map(({ img, date, title, description, slug }, index) => {

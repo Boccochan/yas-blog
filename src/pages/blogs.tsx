@@ -12,6 +12,8 @@ import {
   MarkdownRemarkEdge,
 } from '@/types/graphql-types'
 
+import '@/styles/main.css'
+
 interface Props extends PageRendererProps {
   pageContext: SitePageContext
   data: Query
@@ -123,7 +125,8 @@ const BlogPage = ({ data, pageContext }: Props) => {
             styles={{
               frame: 'h-blog-summary-md md:h-blog-summary bg-white mb-8',
               inner: 'px-2 py-2 md:px-6 md:py-8',
-              title: 'text-md md:text-xl mb-3 font-bold',
+              title:
+                'text-md md:text-xl mb-3 font-bold  inline-block menu-hover',
               description: 'text-xs md:text-normal',
             }}
           />
