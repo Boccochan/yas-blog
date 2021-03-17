@@ -8,9 +8,10 @@ import { useTranslation } from 'react-i18next'
 import Img from 'gatsby-image'
 import Header from '@/components/Header'
 import BlogMenu from '@/components/Blog/Menu'
-import { AiFillLike } from 'react-icons/ai'
+// import { AiFillLike } from 'react-icons/ai'
 import SnsMobile from '@/components/Sns/Mobile'
 import SnsLaptop from '@/components/Sns/Laptop'
+import Likes from '@/components/Sns/Likes'
 import '@/styles/blog.scss'
 
 interface Props extends PageRendererProps {
@@ -125,7 +126,7 @@ const Post = ({ data, pageContext }: Props) => {
 
   return (
     <div className="bg-gray-100 ">
-      <Header siteTitle={'Yasuhiro Ito'} />
+      <Header siteTitle={'Yasuhiro Ito'} langSelector={false} />
       <SEO title="Blog" description={description} />
       <div className="flex min-h-screen flex-grow mx-auto md:max-w-6xl mt-4">
         <div className="hidden md:block h-full w-20 py-10">
@@ -152,8 +153,7 @@ const Post = ({ data, pageContext }: Props) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <div className="w-full flex justify-start items-center ">
-            <AiFillLike className="text-gray-600 text-2xl mr-2" />
-            <p className="text-center text-xs text-gray-900">352</p>
+            <Likes />
           </div>
         </div>
         <div className="hidden md:block h-full w-4/12 mx-4">

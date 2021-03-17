@@ -5,7 +5,7 @@ import {
   LinkedinShareButton,
 } from 'react-share'
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
-import { AiFillLike } from 'react-icons/ai'
+import Likes from '@/components/Sns/Likes'
 
 interface Props {
   title: string
@@ -16,10 +16,7 @@ const Laptop = ({ title, url }: Props) => {
   return (
     <>
       <div className="w-full flex justify-center items-center mb-8">
-        <div>
-          <AiFillLike className="text-gray-600 text-4xl" />
-          <p className="text-center text-xs text-gray-900">352</p>
-        </div>
+        <Likes />
       </div>
 
       <FacebookShareButton
