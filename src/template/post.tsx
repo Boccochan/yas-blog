@@ -125,7 +125,7 @@ const Post = ({ data, pageContext }: Props) => {
 
   return (
     <div className="bg-gray-100 ">
-      <Header siteTitle={'Yasuhiro Ito'} />
+      <Header siteTitle={'Yasuhiro Ito'} langSelector={false} />
       <SEO title="Blog" description={description} />
       <div className="flex min-h-screen flex-grow mx-auto md:max-w-6xl mt-4">
         <div className="hidden md:block h-full w-20 py-10">

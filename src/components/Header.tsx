@@ -7,6 +7,7 @@ import '@/styles/main.css'
 
 interface Props {
   siteTitle: string
+  langSelector?: boolean
 }
 
 const Menu = () => (
@@ -19,9 +20,9 @@ const Menu = () => (
   </>
 )
 
-const Header = ({ siteTitle }: Props) => {
+const Header = ({ siteTitle, langSelector = true }: Props) => {
   const [open, setOpen] = useState(false)
-
+  console.log(langSelector)
   return (
     <>
       <header className="bg-white">
@@ -40,10 +41,11 @@ const Header = ({ siteTitle }: Props) => {
           <ul className="hidden md:flex md:flex-row w-6/12">
             <Menu />
           </ul>
-
-          <div className="ml-auto h-full flex items-center justify-left">
-            <LangSelector />
-          </div>
+          {langSelector && (
+            <div className="ml-auto h-full flex items-center justify-left">
+              <LangSelector />
+            </div>
+          )}
         </nav>
       </header>
       {open && (
