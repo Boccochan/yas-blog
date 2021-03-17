@@ -18,14 +18,24 @@ const query = graphql`
 `
 
 const Github = () => (
-  <a href="https://github.com/Boccochan" className="flex items-center">
+  <a
+    href="https://github.com/Boccochan"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center"
+  >
     <FaGithub size="18px" />
     <p className="pl-2 text-xs">Boccochan</p>
   </a>
 )
 
 const Twitter = () => (
-  <a href="https://twitter.com/yasuhiro_it" className="flex items-center">
+  <a
+    href="https://twitter.com/yasuhiro_it"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center"
+  >
     <FaTwitter size="18px" />
     <p className="pl-2 text-xs">@yasuhiro_it</p>
   </a>

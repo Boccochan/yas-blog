@@ -165,7 +165,7 @@ const Post = ({ data, pageContext }: Props) => {
         </div>
       </div>
 
-      <footer id="footer" className="flex-none bg-gray-300 sticky top-0">
+      <footer id="footer" className="flex-none bg-gray-300 sticky top-0 mt-10">
         <p className="p-2 text-center text-xs">
           Copyright © 2021 Yasuhiro Ito. All Rights Reserved.
         </p>

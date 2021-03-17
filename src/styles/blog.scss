@@ -32,6 +32,9 @@
   li {
     @apply ml-1 text-base font-normal text-gray-700
   }
+  a {
+    @apply text-blue-600
+  }
 }
 
 @screen md {
