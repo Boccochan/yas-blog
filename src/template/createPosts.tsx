@@ -1,4 +1,11 @@
 import path from 'path'
+import { graphql, PageRendererProps, useStaticQuery } from 'gatsby'
+import {
+  Query,
+  SitePageContext,
+  MarkdownRemark,
+  MarkdownRemarkEdge,
+} from '@/types/graphql-types'
 
 interface Post {
   node: {
@@ -53,7 +60,21 @@ export const createPages: GatsbyCreatePages = async ({
             }
             frontmatter {
               title
+              date
+              description
               lang
+              feature
+              featuredImage {
+                childrenImageSharp {
+                  fluid(maxWidth: 800, maxHeight: 500) {
+                    aspectRatio
+                    base64
+                    sizes
+                    src
+                    srcSet
+                  }
+                }
+              }
             }
           }
         }

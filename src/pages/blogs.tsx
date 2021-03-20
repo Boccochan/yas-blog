@@ -53,7 +53,10 @@ export const pageQuery = graphql`
 
 const createSummary = (node: MarkdownRemark, descript: boolean = false) => {
   const { title, date, description } = node.frontmatter!
-
+  console.log(
+    11111,
+    node!.frontmatter!.featuredImage.childrenImageSharp[0].fluid
+  )
   if (descript) {
     return {
       title: title as string,

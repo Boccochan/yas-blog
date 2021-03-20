@@ -20,6 +20,8 @@ module.exports = {
       'blog-summary': '600px',
       'blog-list-md': '260px',
       'blog-list-xs': '240px',
+      'blog-nav-md': '320px',
+      'blog-nav-xs': '300px',
     },
     extend: {},
   },
