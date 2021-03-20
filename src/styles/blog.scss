@@ -35,6 +35,10 @@
   a {
     @apply text-blue-600
   }
+
+  blockquote {
+    @apply italic
+  }
 }
 
 @screen md {
