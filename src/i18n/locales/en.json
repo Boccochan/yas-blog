@@ -47,5 +47,7 @@
   "history": "Work Experience",
   "others": "Others",
   "education": "Education",
-  "lang": "Language"
+  "lang": "Language",
+  "previous-post": "Previous Post",
+  "next-post": "Next Post"
 }
