@@ -36,7 +36,7 @@ A program is a chunk of machine code. That is really important concept. Please d
 CPU fetches a machine code from DRAM memory. I do not explanation about cache here for making things simple.
 
 
-![image](./image-cpu.png)
+![image](./cpu.png)
 
 
 The most important thing is that CPU can fetch one machine code at the same time. In addition, CPU can fetch a machine code in order, such as address 0x0000, 0x0002,  0x0004 and so on. This explanation is not accurate since 'if' statement or calling function can change the next address which should be fetched. But I want to skip the explation about program counter for making things simple. 

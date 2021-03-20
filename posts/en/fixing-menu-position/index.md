@@ -4,7 +4,6 @@ date: "2020-07-21T21:40:32.169Z"
 description: How to fix the postion of the nav bar?
 featuredImage: ./close.jpg
 lang: "en"
-feature: true
 ---
 
 If you want to fix the postion of the nav bar, you need to put just postion: fixed.

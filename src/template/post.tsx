@@ -11,6 +11,7 @@ import BlogMenu from '@/components/Blog/Menu'
 import SnsMobile from '@/components/Sns/Mobile'
 import SnsLaptop from '@/components/Sns/Laptop'
 import Likes from '@/components/Sns/Likes'
+import Footer from '@/components/Footer'
 import '@/styles/blog.scss'
 
 interface Props extends PageRendererProps {
@@ -163,12 +164,7 @@ const Post = ({ data, pageContext }: Props) => {
           </div>
         </div>
       </div>
-
-      <footer id="footer" className="flex-none bg-gray-300 sticky top-0 mt-10">
-        <p className="p-2 text-center text-xs">
-          Copyright © 2021 Yasuhiro Ito. All Rights Reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }
