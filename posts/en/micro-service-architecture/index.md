@@ -35,7 +35,7 @@ Idempotency is required to run your system correctly.
 
 ### High scalable and robust queue 
 
-Queue helps to make your system asynchronous. Fortunately, AWS provides a high scalable and robus queue to us which is [Simple Queue Service](./https://aws.amazon.com/sqs/?nc1=h_ls).
+Queue helps to make your system asynchronous. Fortunately, AWS provides a high scalable and robus queue to us which is [Simple Queue Service](https://aws.amazon.com/sqs/?nc1=h_ls).
 
 > Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. 
 
@@ -55,7 +55,7 @@ Using a high and robus queue like SQS is the key factor for a micro service arch
 
 We need to monitor our system anyway. It does not matter if the system is micro service or not. Some venders provides excellent monitoring systems such as Datadog. But it might quit expensive for you.
 
-[Sentry](./https://sentry.io/welcome/?utm_source=google&utm_medium=cpc&utm_campaign=9575834316&content=463631231007&utm_term=sentry%20application%20monitoring&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsl2Bay-suTrebmudVR2pWyNVXQL3y1RFf8P79Rcb3ymmYXEhMeEoLwaAqHQEALw_wcB) might be a good monitoring service for you. There is an [onpremise](./https://github.com/getsentry/onpremise) version which is free. 
+[Sentry](https://sentry.io/welcome/?utm_source=google&utm_medium=cpc&utm_campaign=9575834316&content=463631231007&utm_term=sentry%20application%20monitoring&gclid=Cj0KCQjwl9GCBhDvARIsAFunhsl2Bay-suTrebmudVR2pWyNVXQL3y1RFf8P79Rcb3ymmYXEhMeEoLwaAqHQEALw_wcB) might be a good monitoring service for you. There is an [onpremise](https://github.com/getsentry/onpremise) version which is free. 
 
 If a component throws an exception, the component should send a message to tell who and why throws an exception. If not, you can not debug or trace problems.
 
@@ -65,7 +65,7 @@ Serverless is not mandatory for a micro service architecture, but serverless arc
 
 You can up and down containers on demand. Also, you can develop and update some components independently. However, if you run your software on a single server, you alway need to care the capability of servers. 
 
-So, I recommend you to use serverless service such as [AWS Lambda](./https://aws.amazon.com/lambda/?nc1=h_ls) or [AWS Fargate](./https://aws.amazon.com/fargate/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&fargate-blogs.sort-by=item.additionalFields.createdDate&fargate-blogs.sort-order=desc).
+So, I recommend you to use serverless service such as [AWS Lambda](https://aws.amazon.com/lambda/?nc1=h_ls) or [AWS Fargate](https://aws.amazon.com/fargate/?nc1=h_ls&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&fargate-blogs.sort-by=item.additionalFields.createdDate&fargate-blogs.sort-order=desc).
 
 Is it expensive? No, if you just started your project. It will be much cheaper than servers. When your project and buisiness expands enough, it is time to think move your system on servers.
 
@@ -73,7 +73,7 @@ You do not need to pay money for servers which does not make money at all. Serve
 
 ## NoSQL 
 
-NoSQL fits a micro service well. NoSQL database can scale easily and provide stable performance because of their architecture. [AWS DynamoDB](./https://aws.amazon.com/dynamodb/?nc1=h_ls), for example, does not have the connection limit like RDMS and you do not need to prepare servers.
+NoSQL fits a micro service well. NoSQL database can scale easily and provide stable performance because of their architecture. [AWS DynamoDB](https://aws.amazon.com/dynamodb/?nc1=h_ls), for example, does not have the connection limit like RDMS and you do not need to prepare servers.
 
 AWS announced a new database architecture years ago. They realized that they do not need some characteristics of RDMS all the time and those characteristics sacrifice scalability and performance stability. 
 
