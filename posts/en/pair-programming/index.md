@@ -1,6 +1,6 @@
 ---
 title: Pair programming and mob programming was very stressfull
-date: "2021-03-21T18:40:32.169Z"
+date: "2021-03-21T10:40:32.169Z"
 description: It was hell to me.
 featuredImage: ./top.jpg
 lang: "en"
