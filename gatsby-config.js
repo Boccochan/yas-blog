@@ -54,6 +54,15 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-remark-code-titles',
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              tooltipText: `Copy to clipboard`,
+              toasterText: 'Copied to clipboard',
+              toasterDuration: 5000,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
