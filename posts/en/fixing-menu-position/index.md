@@ -2,7 +2,7 @@
 title: Fix the position of a nav bar
 date: "2020-07-21T21:40:32.169Z"
 description: How to fix the postion of the nav bar?
-featuredImage: ./close.jpg
+featuredImage: ./nav.jpg
 lang: "en"
 ---
 
