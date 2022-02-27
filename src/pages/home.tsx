@@ -11,6 +11,8 @@ import Programming from '@/components/Home/Programming'
 import HandsOn from '@/components/Home/HandsOn'
 import History from '@/components/Home/History'
 import Others from '@/components/Home/Others'
+// import Img, { FixedObject } from 'gatsby-image'
+
 import '@/styles/home.scss'
 
 interface Props extends PageRendererProps {
@@ -19,9 +21,9 @@ interface Props extends PageRendererProps {
 
 export const pageQuery = graphql`
   query {
-    file(relativePath: { eq: "home/robots.jpg" }) {
+    file(relativePath: { eq: "home/home.jpg" }) {
       childImageSharp {
-        fixed(width: 400) {
+        fixed(width: 600) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -36,8 +38,13 @@ const IndexPage = ({ data }: Props) => {
   return (
     <Layout isMain={true}>
       <SEO title="Yasuhiro Ito" />
-      <div className="home">
-        <h1 className="">Yasuhiro Ito</h1>
+      <div className="mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-6">
+        <div className="flex items-center">
+          <h1>Hello</h1>
+          <div className="ml-auto">
+            <Img fixed={fixed as FixedObject} alt="top-image" />
+          </div>
+        </div>
       </div>
     </Layout>
   )

@@ -92,11 +92,8 @@ const query = `
 }
 `
 
-export const createPages: GatsbyCreatePages = async ({
-  graphql,
-  boundActionCreators,
-}) => {
-  const { createPage } = boundActionCreators
+export const createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
   const allMarkdown = await graphql(query)
 

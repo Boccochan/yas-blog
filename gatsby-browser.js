@@ -9,3 +9,11 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'prismjs/plugins/command-line/prism-command-line.css'
 import './src/styles/remark-copy.css'
 export { wrapPageElement, wrapRootElement } from './gatsby-ssr'
+
+export const onClientEntry = () => {
+  // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
+  if (!(`IntersectionObserver` in window)) {
+    import(`intersection-observer`)
+    console.log(`# IntersectionObserver is polyfilled!`)
+  }
+}

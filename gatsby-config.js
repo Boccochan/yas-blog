@@ -106,6 +106,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [

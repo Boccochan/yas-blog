@@ -26,3 +26,13 @@
 .menu-hover:hover::after {
   transform: scale(1, 1);
 }
+
+.main-frame {
+  @apply mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-6;
+}
+
+.main-button {
+  /* background-color: rgba(239, 68, 68, 1); */
+  background: rgba(255, 255, 255, 1);
+}
+
