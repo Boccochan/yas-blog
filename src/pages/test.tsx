@@ -40,13 +40,13 @@ const GbiBridged = () => {
         <div className="absolute top-0 left-0 bg-black w-full min-h-screen opacity-75"></div>
         <div className="absolute top-0 left-0 w-full min-h-screen">
           <div className="main-frame text-white">
-            <h1 className="text-6xl mt-32 mb-10">Yasuhiro Ito</h1>
+            <h1 className="text-6xl mt-32 mb-8">Yasuhiro Ito</h1>
             <p className="text-2xl">{t('selfsummary')}</p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-4">
-              <button className="bg-red-600 py-4 rounded-sm px-8 opacity-100">
+              <button className="bg-blue-600 py-4 rounded-sm px-8">
                 {t('resume')}
               </button>
-              <button className="bg-blue-500 py-4 rounded-sm px-8 opacity-100">
+              <button className="border border-white py-4 rounded-sm px-8">
                 {t('techblog')}
               </button>
             </div>
