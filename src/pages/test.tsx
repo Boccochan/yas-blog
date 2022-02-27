@@ -35,19 +35,19 @@ const GbiBridged = () => {
     <Layout isMain={true}>
       <SEO title="Yasuhiro Ito" />
       <div className="relative w-full min-h-screen">
-        <BgImage image={image} className="w-full min-h-screen">
+        <BgImage image={image}>
           <div className="main-overlay w-full min-h-screen">
             <div className="main-frame text-white">
-              <h1 className="text-6xl mt-4 md:mt-32 mb-8">Yasuhiro Ito</h1>
+              <h1 className="text-6xl mt-4 md:mt-32 mb-8">{t('author')}</h1>
               <p className="text-2xl">{t('selfsummary')}</p>
               <div className="my-8 md:mt-12 grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div className="bg-blue-600 rounded-sm flex items-center py-4">
+                <div className="bg-blue-500 hover:bg-blue-600 rounded-sm flex items-center py-4 cursor-pointer">
                   <div className="flex items-center h-full mx-auto">
                     <div className="mr-4">{t('resume')}</div>
                     <MdArrowForwardIos />
                   </div>
                 </div>
-                <div className="border border-white rounded-sm flex items-center py-4">
+                <div className="border border-white hover:bg-gray-700 hover:opacity-75 rounded-sm flex items-center py-4 cursor-pointer">
                   <div className="flex items-center h-full mx-auto">
                     <div className="mr-4">{t('techblog')}</div>
                     <MdArrowForwardIos />
@@ -57,6 +57,7 @@ const GbiBridged = () => {
             </div>
           </div>
         </BgImage>
+        <div>Hello</div>
       </div>
     </Layout>
   )
