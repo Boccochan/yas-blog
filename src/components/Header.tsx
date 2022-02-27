@@ -14,7 +14,7 @@ const Menu = () => (
   <>
     <li className="md:border-l-2 md:border-black md:pl-6">
       <Anchor to="/blogs" className="menu menu-hover md:text-base">
-        Yasuhiro Tech Blog
+        Tech Blog
       </Anchor>
     </li>
   </>

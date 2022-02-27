@@ -31,6 +31,10 @@
   @apply mx-auto max-w-6xl pt-12 px-4 pb-6 xs:w-full md:w-11/12 md:mb-6;
 }
 
+.main-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
 .main-button {
   /* background-color: rgba(239, 68, 68, 1); */
   background: rgba(255, 255, 255, 1);
