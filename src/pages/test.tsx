@@ -6,8 +6,7 @@ import Layout from '@/components/Layout'
 import { convertToBgImage, BgImage } from 'gbimage-bridge'
 import { useTranslation } from 'react-i18next'
 import { MdArrowForwardIos } from 'react-icons/md'
-
-// https://www.shutterstock.com/ja/image-photo/coding-code-program-programming-developer-compute-517228426
+import Skills from '@/components/Home/Skills'
 
 const GbiBridged = () => {
   const [t] = useTranslation()
@@ -57,7 +56,9 @@ const GbiBridged = () => {
             </div>
           </div>
         </BgImage>
-        <div>Hello</div>
+        <div className="main-frame">
+          <Skills />
+        </div>
       </div>
     </Layout>
   )
