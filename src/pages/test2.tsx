@@ -9,12 +9,16 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import Skills from '@/components/Home/Skills'
 import {Test, Home} from '@/components/Svg/index'
 
+
 export default function test2() {
   return (
     <div className="hoge">
       <div className="gravini">
         <div className="slide-bar" />
         <h1>Hello World!</h1>
+        <div>
+          <h1>Hello 22222222222222222</h1>
+        </div>
       </div>
     </div>
   )

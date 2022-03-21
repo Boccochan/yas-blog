@@ -45,20 +45,7 @@
 	height: 100vh;
   background: linear-gradient(90deg, rgba(254,128,228,1) 0%, rgba(232,207,113,1) 35%, rgba(236,172,241,1) 100%);
 	background-size: 100% 100%;/*サイズを大きくひきのばす*/
-	/* animation: bggradient 60s ease infinite; */
 }
-/*  
-@keyframes bggradient{
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
 
 .hoge {
   position: relative;
@@ -68,7 +55,7 @@
 }
 
 .gravini {
-  width: 120px;
+  /* width: 120px; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -78,7 +65,7 @@
 
 .slide-bar {
   position: absolute;
-  width: 0%;
+  width: 100%;
   background-color: red;
   height: 100%;
   left: 0;
@@ -103,19 +90,21 @@
 
 @keyframes slidebar{
   0% {
-    width: 0;
     opacity: 1;
-    transform: translateX(0px);
+    transform-origin: left;
+    transform: scaleX(0);
   }
   60% {
-    width: 120px;
+    transform-origin: left;
     opacity: 1;
-    transform: translateX(0px);
-    right: 0;
+    transform: scaleX(1);
+  }
+  60.001% {
+    transform-origin:right;
   }
   100% {
-    width: 0px;
-    transform: translateX(120px);
+    transform-origin: right;
+    transform: scaleX(0);
     opacity: 1;
   }
 }
