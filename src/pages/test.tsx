@@ -1,16 +1,17 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
+import { getImage, GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 import SEO from '@/components/Seo'
 import Layout from '@/components/Layout'
 import { convertToBgImage, BgImage } from 'gbimage-bridge'
 import { useTranslation } from 'react-i18next'
 import { MdArrowForwardIos } from 'react-icons/md'
 import Skills from '@/components/Home/Skills'
+import {Test, Home} from '@/components/Svg/index'
 
 const GbiBridged = () => {
   const [t] = useTranslation()
-  const { placeholderImage } = useStaticQuery(
+  const { placeholderImage, desktop } = useStaticQuery(
     graphql`
       query {
         placeholderImage: file(relativePath: { eq: "home/home10.jpg" }) {
@@ -22,10 +23,34 @@ const GbiBridged = () => {
             )
           }
         }
+        desktop: file(relativePath: { eq: "home/desktop.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              layout: CONSTRAINED
+            )
+          }
+        }
       }
     `
   )
+
+  // const { desktop } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       desktop: file(relativePath: { eq: "home/desktop.png" }) {
+  //         childImageSharp {
+  //           gatsbyImageData(
+  //             width: 200
+  //             placeholder: BLURRED
+  //             formats: [AUTO, WEBP, AVIF]
+  //           )
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
   const image = getImage(placeholderImage)
+  const desktopImage = getImage(desktop)
 
   // Use like this:
   const bgImage = convertToBgImage(image)
@@ -33,6 +58,7 @@ const GbiBridged = () => {
   return (
     <Layout isMain={true}>
       <SEO title="Yasuhiro Ito" />
+
       <div className="relative w-full min-h-screen">
         <BgImage image={image}>
           <div className="main-overlay w-full min-h-screen">
@@ -53,6 +79,14 @@ const GbiBridged = () => {
                   </div>
                 </div>
               </div>
+              <div className="mt-24">
+                <Home />
+              </div>
+
+              
+              {/* <Desktop /> */}
+              {/* <StaticImage src={'../images/desktop.png'} formats={['auto', 'avif']} alt="desktop.png" /> */}
+              {/* <GatsbyImage image={desktopImage}/> */}
             </div>
           </div>
         </BgImage>

@@ -40,3 +40,82 @@
   background: rgba(255, 255, 255, 1);
 }
 
+.test {
+	width: 100%;
+	height: 100vh;
+  background: linear-gradient(90deg, rgba(254,128,228,1) 0%, rgba(232,207,113,1) 35%, rgba(236,172,241,1) 100%);
+	background-size: 100% 100%;/*サイズを大きくひきのばす*/
+	/* animation: bggradient 60s ease infinite; */
+}
+/*  
+@keyframes bggradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+
+.hoge {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.gravini {
+  width: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.slide-bar {
+  position: absolute;
+  width: 0%;
+  background-color: red;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  animation: slidebar 1s ease;
+}
+
+.gravini h1 {
+  opacity: 0;
+  animation: fadein 1.1s 1s ease forwards;
+  text-align: center;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidebar{
+  0% {
+    width: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  60% {
+    width: 120px;
+    opacity: 1;
+    transform: translateX(0px);
+    right: 0;
+  }
+  100% {
+    width: 0px;
+    transform: translateX(120px);
+    opacity: 1;
+  }
+}

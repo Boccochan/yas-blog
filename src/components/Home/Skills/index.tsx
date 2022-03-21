@@ -12,17 +12,17 @@ export default function Index() {
   return (
     <>
       <h2 className="text-4xl font-bold text-gray-600 mt-4 mb-8">
-        {t('Skills summary')}
+        {t('skillsSummary')}
       </h2>
-      <div className="grid grid-cols-5 gap-4">
+      {/* <div className="grid grid-cols-5 gap-4">
         <Typescript />
         <ReactIcon />
         <Python />
         <Github />
         <Aws />
-      </div>
-      <p className="my-8 text-2xl text-gray-600 font-bold">
-        {t('Serverless architecture')}
+      </div> */}
+      <p className="my-8 text-lg text-gray-600">
+        {t('skillsIntroduction')}
       </p>
     </>
   )

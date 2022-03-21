@@ -52,5 +52,7 @@
   "next-post": "Next Post",
   "selfsummary": "I am an over 15 years professional experienced software engineer. Capable of working with variety of technology, such as modern front-end, back-end, AWS and embedded system. Also, I've been writting tech blogs occationary.",
   "resume": "See skill details",
-  "techblog": "Tech blogs"
+  "techblog": "Tech blogs",
+  "skillsSummary": "Skills summary",
+  "skillsIntroduction": "Designing SPA front-end, back-end, AWS, testing automation and CI/CD like below. Good at desinging by Serverless architecture on AWS from scratch."
 }

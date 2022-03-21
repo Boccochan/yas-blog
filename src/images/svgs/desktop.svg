@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.837078mm"
+   height="41.118969mm"
+   viewBox="0 0 56.837078 41.118969"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="desktop.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.9433782"
+     inkscape:cx="98.696117"
+     inkscape:cy="53.170197"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.289049,-241.76384)">
+    <rect
+       style="fill:#ffffff;fill-opacity:3.12955e-05;stroke:#ffffff;stroke-width:0.965;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3740"
+       width="55.872078"
+       height="30.116377"
+       x="32.771549"
+       y="242.24634"
+       ry="0.15932032"
+       rx="0.28743443"
+       inkscape:export-filename="/home/yasuhiro/yas-blog/src/images/home/desktop.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect5159"
+       width="55.516556"
+       height="3.5330505"
+       x="32.94931"
+       y="268.82965"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/home/yasuhiro/yas-blog/src/images/home/desktop.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="rect6705"
+       style="fill:#ffffff;fill-rule:evenodd;stroke-width:0.264583"
+       d="m 58.173919,272.85273 h 5.067339 l 1.058333,8.26519 h -7.184005 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/yasuhiro/yas-blog/src/images/home/desktop.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="rect7123"
+       width="17.749054"
+       height="1.7537476"
+       x="51.833061"
+       y="281.12906"
+       inkscape:export-filename="/home/yasuhiro/yas-blog/src/images/home/desktop.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

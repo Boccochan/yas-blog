@@ -112,6 +112,7 @@ module.exports = {
         specialChars: '/:',
       },
     },
+    "gatsby-plugin-image",
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -121,5 +122,13 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-react-svg',
+    //   options: {
+    //     rule: {
+    //       include: '/src/images/'
+    //     }
+    //   }
+    // },
   ],
 }
