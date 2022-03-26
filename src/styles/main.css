@@ -4,10 +4,26 @@
 
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
 html {
   font-family: 'Roboto', sans-serif;
+}
+
+.text-gradation {
+  color: #ff8c00;
+  background: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu-hover {
@@ -47,10 +63,15 @@ html {
 }
 
 .test {
-	width: 100%;
-	height: 100vh;
-  background: linear-gradient(90deg, rgba(254,128,228,1) 0%, rgba(232,207,113,1) 35%, rgba(236,172,241,1) 100%);
-	background-size: 100% 100%;/*サイズを大きくひきのばす*/
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(254, 128, 228, 1) 0%,
+    rgba(232, 207, 113, 1) 35%,
+    rgba(236, 172, 241, 1) 100%
+  );
+  background-size: 100% 100%; /*サイズを大きくひきのばす*/
 }
 
 .hoge {
@@ -61,7 +82,6 @@ html {
 }
 
 .gravini {
-  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -151,7 +171,7 @@ html {
   }
 }
 
-@keyframes slidebar{
+@keyframes slidebar {
   0% {
     opacity: 1;
     transform-origin: left;
@@ -163,7 +183,7 @@ html {
     transform: scaleX(1);
   }
   60.001% {
-    transform-origin:right;
+    transform-origin: right;
   }
   100% {
     transform-origin: right;
@@ -172,22 +192,22 @@ html {
   }
 }
 @keyframes slide-in-out {
-    0%{
-      opacity: 1;
-      transform-origin: bottom;
-      transform: scaleY(0);
-    }
-    60% {
-      opacity: 1;
-      transform-origin: bottom;
-      transform: scaleY(1);
-    }
-    60.001% {
-      transform-origin: top;
-    }
-    100% {
-      transform-origin: top;
-      transform: scaleY(0);
-      opacity: 1;
-    }
+  0% {
+    opacity: 1;
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+  60% {
+    opacity: 1;
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  60.001% {
+    transform-origin: top;
+  }
+  100% {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 1;
+  }
 }
