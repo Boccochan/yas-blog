@@ -4,6 +4,12 @@
 
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 .menu-hover {
   position: relative;
   display: inline-block;
@@ -55,7 +61,7 @@
 }
 
 .gravini {
-  /* width: 120px; */
+  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -74,6 +80,37 @@
 }
 
 .gravini h1 {
+  opacity: 0;
+  animation: fadein 1.1s 1s ease forwards;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.centralize {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.slide-left-to-right-bar {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(56 189 248);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  animation: slidebar 1s ease;
+}
+
+.slide-left-to-right-text {
   opacity: 0;
   animation: fadein 1.1s 1s ease forwards;
   text-align: center;
