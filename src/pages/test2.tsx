@@ -14,8 +14,9 @@ export default function test2() {
   return (
     <div className="wrapper">
       <div className="centralize">
-        <SlideLeftToRight text={"Yasuhiro Ito. Hey hey my my"}/>
+        <SlideLeftToRight text={"Yasuhiro Ito"} className="text-5xl font-bold fade-in-fade-out"/>
       </div>
+      <div className="slide-bottom-to-top" />
     </div>
   )
 }
