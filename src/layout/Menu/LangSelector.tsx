@@ -49,8 +49,8 @@ const LangSelector = () => {
         onClick={() => setOpen(!isOpen)}
         className="flex items-center h-full cursor-pointer"
       >
-        <GrLanguage className="" />
-        <p className="hidden md:block ml-2">{lang.selected}</p>
+        <GrLanguage />
+        <p className="hidden md:block ml-2 text-xs">{lang.selected}</p>
       </div>
       {isOpen && (
         <div

@@ -1,3 +1,7 @@
+export { default as BubleBottom } from './BubleBottom'
+export { default as BubleCorner } from './BubleCorner'
 export { default as Desktop } from './Desktop'
+export { default as Hoge } from './Hoge'
 export { default as Home } from './Home'
+export { default as SmallBuble } from './SmallBuble'
 export { default as Test } from './Test'

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="30mm"
+   height="30mm"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="small-buble.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.36792228"
+     inkscape:cx="-31.256601"
+     inkscape:cy="-156.28301"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2640">
+      <stop
+         style="stop-color:#045de9;stop-opacity:1"
+         offset="0"
+         id="stop2636" />
+      <stop
+         style="stop-color:#09c6f9;stop-opacity:1"
+         offset="1"
+         id="stop2638" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="1036">
+      <stop
+         style="stop-color:#09c6f9;stop-opacity:1;"
+         offset="0"
+         id="stop1036" />
+      <stop
+         style="stop-color:#09c6f9;stop-opacity:0;"
+         offset="1"
+         id="stop1038" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#1036"
+       id="linearGradient1884"
+       gradientUnits="userSpaceOnUse"
+       x1="157.07498"
+       y1="430.15042"
+       x2="48.027195"
+       y2="454.45883"
+       gradientTransform="matrix(1.4094245,0,0,1.3805351,-207.37768,-211.7148)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2640"
+       id="linearGradient2053"
+       gradientUnits="userSpaceOnUse"
+       x1="171.27759"
+       y1="449.04428"
+       x2="86.852165"
+       y2="451.4711"
+       gradientTransform="matrix(0.70471221,0,0,0.69026748,178.98392,247.41589)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2640"
+       id="linearGradient3904"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3523561,0,0,0.34513375,153.35246,386.49627)"
+       x1="171.27759"
+       y1="449.04428"
+       x2="86.852165"
+       y2="451.4711" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2640"
+       id="linearGradient3908"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.46980813,0,0,0.46017836,177.87146,208.04352)"
+       x1="171.27759"
+       y1="449.04428"
+       x2="86.852165"
+       y2="451.4711" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-183.84929,-527.50165)">
+    <ellipse
+       style="fill:url(#linearGradient2053);fill-opacity:1;stroke:#ffffff;stroke-width:0.184824;stroke-linejoin:round"
+       id="path846"
+       cx="269.97754"
+       cy="559.4267"
+       rx="29.907589"
+       ry="29.907587" />
+    <circle
+       style="fill:url(#linearGradient1884);fill-opacity:1;stroke:#ffffff;stroke-width:0.36965;stroke-linejoin:round"
+       id="ellipse1882"
+       cx="-25.390442"
+       cy="412.30688"
+       r="59.815174" />
+    <circle
+       style="fill:url(#linearGradient3904);fill-opacity:1;stroke:#ffffff;stroke-width:0.0924121;stroke-linejoin:round"
+       id="ellipse3902"
+       cx="198.84929"
+       cy="542.50165"
+       r="14.953794" />
+    <circle
+       style="fill:url(#linearGradient3908);fill-opacity:1;stroke:#ffffff;stroke-width:0.123216;stroke-linejoin:round"
+       id="ellipse3906"
+       cx="238.53387"
+       cy="416.05072"
+       r="19.938393" />
+  </g>
+</svg>
